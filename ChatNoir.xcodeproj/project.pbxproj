@@ -3,19 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C8F2417B0F5C49381B01026 /* Pods_ChatNoir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1693D53B8DA2BD19E0FF3E6A /* Pods_ChatNoir.framework */; };
 		B6DCD6A0255AEDA100340143 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD69F255AEDA100340143 /* AppDelegate.swift */; };
 		B6DCD6A2255AEDA100340143 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD6A1255AEDA100340143 /* SceneDelegate.swift */; };
 		B6DCD6A4255AEDA100340143 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD6A3255AEDA100340143 /* ViewController.swift */; };
 		B6DCD6A7255AEDA100340143 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6DCD6A5255AEDA100340143 /* Main.storyboard */; };
 		B6DCD6A9255AEDA300340143 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6DCD6A8255AEDA300340143 /* Assets.xcassets */; };
 		B6DCD6AC255AEDA300340143 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6DCD6AA255AEDA300340143 /* LaunchScreen.storyboard */; };
+		B6DCD6DA255B129F00340143 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6DCD6D9255B129F00340143 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1693D53B8DA2BD19E0FF3E6A /* Pods_ChatNoir.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatNoir.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FA74AD02F54695574D5BF62 /* Pods-ChatNoir.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatNoir.debug.xcconfig"; path = "Target Support Files/Pods-ChatNoir/Pods-ChatNoir.debug.xcconfig"; sourceTree = "<group>"; };
+		5758A7C3B6FADA7B5276A150 /* Pods-ChatNoir.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatNoir.release.xcconfig"; path = "Target Support Files/Pods-ChatNoir/Pods-ChatNoir.release.xcconfig"; sourceTree = "<group>"; };
 		B6DCD69C255AEDA100340143 /* ChatNoir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatNoir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6DCD69F255AEDA100340143 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6DCD6A1255AEDA100340143 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		B6DCD6A8255AEDA300340143 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6DCD6AB255AEDA300340143 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6DCD6AD255AEDA300340143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6DCD6D9255B129F00340143 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C8F2417B0F5C49381B01026 /* Pods_ChatNoir.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5503097E56CA4FB3EF9EE770 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1693D53B8DA2BD19E0FF3E6A /* Pods_ChatNoir.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		932752290CFEABBAEA91926B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1FA74AD02F54695574D5BF62 /* Pods-ChatNoir.debug.xcconfig */,
+				5758A7C3B6FADA7B5276A150 /* Pods-ChatNoir.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B6DCD693255AEDA100340143 = {
 			isa = PBXGroup;
 			children = (
 				B6DCD69E255AEDA100340143 /* ChatNoir */,
 				B6DCD69D255AEDA100340143 /* Products */,
+				932752290CFEABBAEA91926B /* Pods */,
+				5503097E56CA4FB3EF9EE770 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +89,7 @@
 				B6DCD6A8255AEDA300340143 /* Assets.xcassets */,
 				B6DCD6AA255AEDA300340143 /* LaunchScreen.storyboard */,
 				B6DCD6AD255AEDA300340143 /* Info.plist */,
+				B6DCD6D9255B129F00340143 /* GoogleService-Info.plist */,
 			);
 			path = ChatNoir;
 			sourceTree = "<group>";
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6DCD6B0255AEDA300340143 /* Build configuration list for PBXNativeTarget "ChatNoir" */;
 			buildPhases = (
+				AD12FFC5EECA7D7B175D0E73 /* [CP] Check Pods Manifest.lock */,
 				B6DCD698255AEDA100340143 /* Sources */,
 				B6DCD699255AEDA100340143 /* Frameworks */,
 				B6DCD69A255AEDA100340143 /* Resources */,
+				48A23D94787AF3662D86B74E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,10 +156,53 @@
 				B6DCD6AC255AEDA300340143 /* LaunchScreen.storyboard in Resources */,
 				B6DCD6A9255AEDA300340143 /* Assets.xcassets in Resources */,
 				B6DCD6A7255AEDA100340143 /* Main.storyboard in Resources */,
+				B6DCD6DA255B129F00340143 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		48A23D94787AF3662D86B74E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChatNoir/Pods-ChatNoir-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChatNoir/Pods-ChatNoir-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChatNoir/Pods-ChatNoir-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD12FFC5EECA7D7B175D0E73 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChatNoir-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B6DCD698255AEDA100340143 /* Sources */ = {
@@ -283,13 +355,14 @@
 		};
 		B6DCD6B1255AEDA300340143 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FA74AD02F54695574D5BF62 /* Pods-ChatNoir.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8ZU2A8P99A;
-				INFOPLIST_FILE = ChatNoir/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				INFOPLIST_FILE = "$(SRCROOT)/ChatNoir/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,13 +376,14 @@
 		};
 		B6DCD6B2255AEDA300340143 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5758A7C3B6FADA7B5276A150 /* Pods-ChatNoir.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8ZU2A8P99A;
-				INFOPLIST_FILE = ChatNoir/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				INFOPLIST_FILE = "$(SRCROOT)/ChatNoir/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
