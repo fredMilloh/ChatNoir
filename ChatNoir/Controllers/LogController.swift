@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LogController: UIViewController {
+class LogController: RootController {
     
     @IBOutlet weak var mailTF: UITextField!
     @IBOutlet weak var pwdTF: UITextField!
@@ -48,6 +48,27 @@ class LogController: UIViewController {
     }
     
     @IBAction func validateButton(_ sender: UIButton) {
+        if let mail = mailTF.text, mail != "" {
+            if let pwd = pwdTF.text, pwd != "" {
+                if segmentes.selectedSegmentIndex == 0 {
+                    //Authentification
+                } else {
+                    if let surname = surnameTF.text, surname != "" {
+                        if let name = nameTF.text, name != "" {
+                            //Création compte
+                        } else {
+                            //Alert pas de name
+                        }
+                    } else {
+                        //Alert pas de surname
+                    }
+                }
+            } else {
+                //alert pas de pwd
+            }
+        } else {
+            // alert pas de mail
+        }
     }
     
     @IBAction func segmentedChange(_ sender: Any) {

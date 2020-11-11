@@ -17,6 +17,9 @@
 		B6DCD74F255C48B500340143 /* LogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD74E255C48B500340143 /* LogController.swift */; };
 		B6DCD753255C4AAA00340143 /* FireAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD752255C4AAA00340143 /* FireAuth.swift */; };
 		B6DCD75B255C601500340143 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD75A255C601500340143 /* RoundedButton.swift */; };
+		B6DCD75E255C645B00340143 /* RootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD75D255C645B00340143 /* RootController.swift */; };
+		B6DCD761255C651C00340143 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD760255C651C00340143 /* AlertView.swift */; };
+		B6DCD764255C663400340143 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD763255C663400340143 /* Enums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		B6DCD74E255C48B500340143 /* LogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogController.swift; sourceTree = "<group>"; };
 		B6DCD752255C4AAA00340143 /* FireAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireAuth.swift; sourceTree = "<group>"; };
 		B6DCD75A255C601500340143 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		B6DCD75D255C645B00340143 /* RootController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootController.swift; sourceTree = "<group>"; };
+		B6DCD760255C651C00340143 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		B6DCD763255C663400340143 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				B6DCD74E255C48B500340143 /* LogController.swift */,
+				B6DCD75D255C645B00340143 /* RootController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -113,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				B6DCD75A255C601500340143 /* RoundedButton.swift */,
+				B6DCD760255C651C00340143 /* AlertView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -120,6 +128,7 @@
 		B6DCD74D255C481300340143 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B6DCD763255C663400340143 /* Enums.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -249,9 +258,12 @@
 			files = (
 				B6DCD74F255C48B500340143 /* LogController.swift in Sources */,
 				B6DCD75B255C601500340143 /* RoundedButton.swift in Sources */,
+				B6DCD761255C651C00340143 /* AlertView.swift in Sources */,
 				B6DCD753255C4AAA00340143 /* FireAuth.swift in Sources */,
 				B6DCD6A0255AEDA100340143 /* AppDelegate.swift in Sources */,
 				B6DCD6A2255AEDA100340143 /* SceneDelegate.swift in Sources */,
+				B6DCD764255C663400340143 /* Enums.swift in Sources */,
+				B6DCD75E255C645B00340143 /* RootController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
