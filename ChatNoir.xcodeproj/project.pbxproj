@@ -10,11 +10,12 @@
 		5C8F2417B0F5C49381B01026 /* Pods_ChatNoir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1693D53B8DA2BD19E0FF3E6A /* Pods_ChatNoir.framework */; };
 		B6DCD6A0255AEDA100340143 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD69F255AEDA100340143 /* AppDelegate.swift */; };
 		B6DCD6A2255AEDA100340143 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD6A1255AEDA100340143 /* SceneDelegate.swift */; };
-		B6DCD6A4255AEDA100340143 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD6A3255AEDA100340143 /* ViewController.swift */; };
 		B6DCD6A7255AEDA100340143 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6DCD6A5255AEDA100340143 /* Main.storyboard */; };
 		B6DCD6A9255AEDA300340143 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6DCD6A8255AEDA300340143 /* Assets.xcassets */; };
 		B6DCD6AC255AEDA300340143 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6DCD6AA255AEDA300340143 /* LaunchScreen.storyboard */; };
 		B6DCD6DA255B129F00340143 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6DCD6D9255B129F00340143 /* GoogleService-Info.plist */; };
+		B6DCD74F255C48B500340143 /* LogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD74E255C48B500340143 /* LogController.swift */; };
+		B6DCD753255C4AAA00340143 /* FireAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD752255C4AAA00340143 /* FireAuth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,12 +25,13 @@
 		B6DCD69C255AEDA100340143 /* ChatNoir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatNoir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6DCD69F255AEDA100340143 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6DCD6A1255AEDA100340143 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B6DCD6A3255AEDA100340143 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B6DCD6A6255AEDA100340143 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6DCD6A8255AEDA300340143 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6DCD6AB255AEDA300340143 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6DCD6AD255AEDA300340143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6DCD6D9255B129F00340143 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B6DCD74E255C48B500340143 /* LogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogController.swift; sourceTree = "<group>"; };
+		B6DCD752255C4AAA00340143 /* FireAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireAuth.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +84,12 @@
 		B6DCD69E255AEDA100340143 /* ChatNoir */ = {
 			isa = PBXGroup;
 			children = (
+				B6DCD751255C4A7900340143 /* FirebaseUtils */,
+				B6DCD74D255C481300340143 /* Models */,
+				B6DCD74C255C480400340143 /* Views */,
+				B6DCD74A255C47E700340143 /* Controllers */,
 				B6DCD69F255AEDA100340143 /* AppDelegate.swift */,
 				B6DCD6A1255AEDA100340143 /* SceneDelegate.swift */,
-				B6DCD6A3255AEDA100340143 /* ViewController.swift */,
 				B6DCD6A5255AEDA100340143 /* Main.storyboard */,
 				B6DCD6A8255AEDA300340143 /* Assets.xcassets */,
 				B6DCD6AA255AEDA300340143 /* LaunchScreen.storyboard */,
@@ -92,6 +97,36 @@
 				B6DCD6D9255B129F00340143 /* GoogleService-Info.plist */,
 			);
 			path = ChatNoir;
+			sourceTree = "<group>";
+		};
+		B6DCD74A255C47E700340143 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B6DCD74E255C48B500340143 /* LogController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B6DCD74C255C480400340143 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B6DCD74D255C481300340143 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B6DCD751255C4A7900340143 /* FirebaseUtils */ = {
+			isa = PBXGroup;
+			children = (
+				B6DCD752255C4AAA00340143 /* FireAuth.swift */,
+			);
+			path = FirebaseUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,7 +244,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6DCD6A4255AEDA100340143 /* ViewController.swift in Sources */,
+				B6DCD74F255C48B500340143 /* LogController.swift in Sources */,
+				B6DCD753255C4AAA00340143 /* FireAuth.swift in Sources */,
 				B6DCD6A0255AEDA100340143 /* AppDelegate.swift in Sources */,
 				B6DCD6A2255AEDA100340143 /* SceneDelegate.swift in Sources */,
 			);
