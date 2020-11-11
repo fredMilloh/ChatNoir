@@ -97,7 +97,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="validateBt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c5O-e3-iVc"/>
+                                    <action selector="validateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uEt-mW-Gb8"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -9,7 +9,7 @@ import Foundation
 import Firebase
 
 class FireAuth {
-    // pour vérifier si on est identifier
+    // pour vérifier si on est authentifier
     func isAuth() -> Bool {
         return Auth.auth().currentUser?.uid != nil
     }

@@ -20,6 +20,8 @@
 		B6DCD75E255C645B00340143 /* RootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD75D255C645B00340143 /* RootController.swift */; };
 		B6DCD761255C651C00340143 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD760255C651C00340143 /* AlertView.swift */; };
 		B6DCD764255C663400340143 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD763255C663400340143 /* Enums.swift */; };
+		B6DCD767255C68AE00340143 /* LoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD766255C68AE00340143 /* LoadableView.swift */; };
+		B6DCD76C255C6D8F00340143 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6DCD76B255C6D8F00340143 /* AlertView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		B6DCD75D255C645B00340143 /* RootController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootController.swift; sourceTree = "<group>"; };
 		B6DCD760255C651C00340143 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		B6DCD763255C663400340143 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		B6DCD766255C68AE00340143 /* LoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableView.swift; sourceTree = "<group>"; };
+		B6DCD76B255C6D8F00340143 /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,15 +96,15 @@
 		B6DCD69E255AEDA100340143 /* ChatNoir */ = {
 			isa = PBXGroup;
 			children = (
+				B6DCD76A255C6D5D00340143 /* Interfaces */,
 				B6DCD751255C4A7900340143 /* FirebaseUtils */,
 				B6DCD74D255C481300340143 /* Models */,
 				B6DCD74C255C480400340143 /* Views */,
+				B6DCD769255C6C8600340143 /* Loadable Views */,
 				B6DCD74A255C47E700340143 /* Controllers */,
 				B6DCD69F255AEDA100340143 /* AppDelegate.swift */,
 				B6DCD6A1255AEDA100340143 /* SceneDelegate.swift */,
-				B6DCD6A5255AEDA100340143 /* Main.storyboard */,
 				B6DCD6A8255AEDA300340143 /* Assets.xcassets */,
-				B6DCD6AA255AEDA300340143 /* LaunchScreen.storyboard */,
 				B6DCD6AD255AEDA300340143 /* Info.plist */,
 				B6DCD6D9255B129F00340143 /* GoogleService-Info.plist */,
 			);
@@ -120,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				B6DCD75A255C601500340143 /* RoundedButton.swift */,
-				B6DCD760255C651C00340143 /* AlertView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -139,6 +142,25 @@
 				B6DCD752255C4AAA00340143 /* FireAuth.swift */,
 			);
 			path = FirebaseUtils;
+			sourceTree = "<group>";
+		};
+		B6DCD769255C6C8600340143 /* Loadable Views */ = {
+			isa = PBXGroup;
+			children = (
+				B6DCD760255C651C00340143 /* AlertView.swift */,
+				B6DCD766255C68AE00340143 /* LoadableView.swift */,
+			);
+			path = "Loadable Views";
+			sourceTree = "<group>";
+		};
+		B6DCD76A255C6D5D00340143 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				B6DCD6A5255AEDA100340143 /* Main.storyboard */,
+				B6DCD6AA255AEDA300340143 /* LaunchScreen.storyboard */,
+				B6DCD76B255C6D8F00340143 /* AlertView.xib */,
+			);
+			path = Interfaces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +224,7 @@
 			files = (
 				B6DCD6AC255AEDA300340143 /* LaunchScreen.storyboard in Resources */,
 				B6DCD6A9255AEDA300340143 /* Assets.xcassets in Resources */,
+				B6DCD76C255C6D8F00340143 /* AlertView.xib in Resources */,
 				B6DCD6A7255AEDA100340143 /* Main.storyboard in Resources */,
 				B6DCD6DA255B129F00340143 /* GoogleService-Info.plist in Resources */,
 			);
@@ -262,6 +285,7 @@
 				B6DCD753255C4AAA00340143 /* FireAuth.swift in Sources */,
 				B6DCD6A0255AEDA100340143 /* AppDelegate.swift in Sources */,
 				B6DCD6A2255AEDA100340143 /* SceneDelegate.swift in Sources */,
+				B6DCD767255C68AE00340143 /* LoadableView.swift in Sources */,
 				B6DCD764255C663400340143 /* Enums.swift in Sources */,
 				B6DCD75E255C645B00340143 /* RootController.swift in Sources */,
 			);

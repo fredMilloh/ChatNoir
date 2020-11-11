@@ -68,6 +68,7 @@ class LogController: RootController {
             }
         } else {
             // alert pas de mail
+            showAlert("Veuillez entrer votre adresse mail", .error)
         }
     }
     

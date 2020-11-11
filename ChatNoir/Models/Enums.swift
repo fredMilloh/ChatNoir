@@ -8,7 +8,7 @@
 import Foundation
 
 enum AlertType {
-    case Error
+    case error
     case camera
     case disconnect
     case changeName
