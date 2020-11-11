@@ -16,6 +16,7 @@
 		B6DCD6DA255B129F00340143 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6DCD6D9255B129F00340143 /* GoogleService-Info.plist */; };
 		B6DCD74F255C48B500340143 /* LogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD74E255C48B500340143 /* LogController.swift */; };
 		B6DCD753255C4AAA00340143 /* FireAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD752255C4AAA00340143 /* FireAuth.swift */; };
+		B6DCD75B255C601500340143 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD75A255C601500340143 /* RoundedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B6DCD6D9255B129F00340143 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B6DCD74E255C48B500340143 /* LogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogController.swift; sourceTree = "<group>"; };
 		B6DCD752255C4AAA00340143 /* FireAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireAuth.swift; sourceTree = "<group>"; };
+		B6DCD75A255C601500340143 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		B6DCD74C255C480400340143 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B6DCD75A255C601500340143 /* RoundedButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6DCD74F255C48B500340143 /* LogController.swift in Sources */,
+				B6DCD75B255C601500340143 /* RoundedButton.swift in Sources */,
 				B6DCD753255C4AAA00340143 /* FireAuth.swift in Sources */,
 				B6DCD6A0255AEDA100340143 /* AppDelegate.swift in Sources */,
 				B6DCD6A2255AEDA100340143 /* SceneDelegate.swift in Sources */,

@@ -53,6 +53,12 @@ class LogController: UIViewController {
     @IBAction func segmentedChange(_ sender: Any) {
         setupUI()
     }
+ 
+// MARKS: retour clavier
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
     
     
     
