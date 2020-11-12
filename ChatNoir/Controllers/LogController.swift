@@ -56,10 +56,27 @@ class LogController: RootController {
             if let pwd = pwdTF.text, pwd != "" {
                 if segmentes.selectedSegmentIndex == 0 {
                     //Authentification
+                    FireAuth().signIn(mail, pwd) { (uid, error) in
+                        if error != nil {
+                            self.showAlert(error, .error)
+                        }
+                        if uid != nil {
+                            //vers controller suivant
+                        }
+                    }
                 } else {
                     if let surname = surnameTF.text, surname != "" {
                         if let name = nameTF.text, name != "" {
                             //Création compte
+                            FireAuth().createUser(mail, pwd) { (uid, error) in
+                                if error != nil {
+                                    self.showAlert(error, .error)
+                                }
+                                if uid != nil {
+                                    let data: [String: Any] = ["name": name, "surname": surname, "uid": uid!]
+                                    FireDatabase().addUser(uid!, data: data)
+                                }
+                            }
                         } else {
                             //Alert pas de name
                             showAlert("Veuillez entrer votre nom", .error)
