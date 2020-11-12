@@ -23,6 +23,7 @@ class LoadableView: UIView {
     
     func loadView() -> UIView {
         let name = String(describing: type(of: self)) //on récupére en string le nom exact de la vue charger
+        //on nomme v la première vue du tableau (first)
         if let v = Bundle.main.loadNibNamed(name, owner: self, options: nil)?.first as? UIView {
             self.addSubview(v)
             v.frame = bounds

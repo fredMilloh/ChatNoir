@@ -22,6 +22,7 @@
 		B6DCD764255C663400340143 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD763255C663400340143 /* Enums.swift */; };
 		B6DCD767255C68AE00340143 /* LoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD766255C68AE00340143 /* LoadableView.swift */; };
 		B6DCD76C255C6D8F00340143 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6DCD76B255C6D8F00340143 /* AlertView.xib */; };
+		B6DCD771255D785800340143 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD770255D785800340143 /* RoundedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		B6DCD763255C663400340143 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		B6DCD766255C68AE00340143 /* LoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableView.swift; sourceTree = "<group>"; };
 		B6DCD76B255C6D8F00340143 /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
+		B6DCD770255D785800340143 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +102,6 @@
 				B6DCD751255C4A7900340143 /* FirebaseUtils */,
 				B6DCD74D255C481300340143 /* Models */,
 				B6DCD74C255C480400340143 /* Views */,
-				B6DCD769255C6C8600340143 /* Loadable Views */,
 				B6DCD74A255C47E700340143 /* Controllers */,
 				B6DCD69F255AEDA100340143 /* AppDelegate.swift */,
 				B6DCD6A1255AEDA100340143 /* SceneDelegate.swift */,
@@ -123,7 +124,8 @@
 		B6DCD74C255C480400340143 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B6DCD75A255C601500340143 /* RoundedButton.swift */,
+				B6DCD76F255D782200340143 /* CustomView */,
+				B6DCD769255C6C8600340143 /* Loadable Views */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -161,6 +163,15 @@
 				B6DCD76B255C6D8F00340143 /* AlertView.xib */,
 			);
 			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		B6DCD76F255D782200340143 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				B6DCD75A255C601500340143 /* RoundedButton.swift */,
+				B6DCD770255D785800340143 /* RoundedView.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +298,7 @@
 				B6DCD6A2255AEDA100340143 /* SceneDelegate.swift in Sources */,
 				B6DCD767255C68AE00340143 /* LoadableView.swift in Sources */,
 				B6DCD764255C663400340143 /* Enums.swift in Sources */,
+				B6DCD771255D785800340143 /* RoundedView.swift in Sources */,
 				B6DCD75E255C645B00340143 /* RootController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
