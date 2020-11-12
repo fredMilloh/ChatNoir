@@ -28,6 +28,8 @@ class LogController: RootController {
         super.viewWillAppear(animated)
         setupUI()
     }
+
+// MARKS: - Gestion affichage champs
     
     func setupUI() {
         if FireAuth().isAuth() {
@@ -46,6 +48,8 @@ class LogController: RootController {
     func updateVisible (_ bool: Bool, _ view: UIView) {
         view.isHidden = !bool
     }
+    
+// MARKS: - Alertes sur champs non remplis
     
     @IBAction func validateButton(_ sender: UIButton) {
         if let mail = mailTF.text, mail != "" {

@@ -102,7 +102,6 @@
 			children = (
 				B6DCD773255D917300340143 /* Utils */,
 				B6DCD76A255C6D5D00340143 /* Interfaces */,
-				B6DCD751255C4A7900340143 /* FirebaseUtils */,
 				B6DCD74D255C481300340143 /* Models */,
 				B6DCD74C255C480400340143 /* Views */,
 				B6DCD74A255C47E700340143 /* Controllers */,
@@ -180,6 +179,7 @@
 		B6DCD773255D917300340143 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B6DCD751255C4A7900340143 /* FirebaseUtils */,
 				B6DCD774255D91A300340143 /* MyNotifCenter.swift */,
 			);
 			path = Utils;
