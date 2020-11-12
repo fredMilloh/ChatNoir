@@ -58,13 +58,16 @@ class LogController: RootController {
                             //Création compte
                         } else {
                             //Alert pas de name
+                            showAlert("Veuillez entrer votre nom", .error)
                         }
                     } else {
                         //Alert pas de surname
+                        showAlert("Veuillez entrer votre prénom", .error)
                     }
                 }
             } else {
                 //alert pas de pwd
+                showAlert("Veuillez entrer votre mot de passe", .error)
             }
         } else {
             // alert pas de mail

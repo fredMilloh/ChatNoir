@@ -60,7 +60,7 @@
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="black-cat" translatesAutoresizingMaskIntoConstraints="NO" id="ybu-U6-zp4">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="big_cat" translatesAutoresizingMaskIntoConstraints="NO" id="ybu-U6-zp4">
                             <rect key="frame" x="172" y="48" width="152" height="152"/>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="190" translatesAutoresizingMaskIntoConstraints="NO" id="mKJ-Tn-v7n">
@@ -142,7 +142,7 @@
         </view>
     </objects>
     <resources>
-        <image name="black-cat" width="48" height="48"/>
+        <image name="big_cat" width="1024" height="1024"/>
         <image name="cancel" width="48" height="48"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -13,6 +13,7 @@ class RootController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        MyNotifCenter().receiveNotif("cancel", self, #selector(closeAlert))
     }
     
     func showAlert(_ message: String?, _ type: AlertType) {
@@ -20,9 +21,13 @@ class RootController: UIViewController {
             closeAlert()
         }
         alertView = AlertView(frame: view.bounds)
+        switch type {
+        case .error: alertView?.setupError(message ?? "")
+        default: break
+        }
         view.addSubview(alertView!)
     }
-    func closeAlert() {
+    @objc func closeAlert() {
         alertView?.removeFromSuperview()
         alertView = nil
     }

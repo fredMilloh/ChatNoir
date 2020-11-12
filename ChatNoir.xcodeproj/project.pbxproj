@@ -23,6 +23,7 @@
 		B6DCD767255C68AE00340143 /* LoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD766255C68AE00340143 /* LoadableView.swift */; };
 		B6DCD76C255C6D8F00340143 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6DCD76B255C6D8F00340143 /* AlertView.xib */; };
 		B6DCD771255D785800340143 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD770255D785800340143 /* RoundedView.swift */; };
+		B6DCD775255D91A300340143 /* MyNotifCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD774255D91A300340143 /* MyNotifCenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		B6DCD766255C68AE00340143 /* LoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableView.swift; sourceTree = "<group>"; };
 		B6DCD76B255C6D8F00340143 /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
 		B6DCD770255D785800340143 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		B6DCD774255D91A300340143 /* MyNotifCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNotifCenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		B6DCD69E255AEDA100340143 /* ChatNoir */ = {
 			isa = PBXGroup;
 			children = (
+				B6DCD773255D917300340143 /* Utils */,
 				B6DCD76A255C6D5D00340143 /* Interfaces */,
 				B6DCD751255C4A7900340143 /* FirebaseUtils */,
 				B6DCD74D255C481300340143 /* Models */,
@@ -172,6 +175,14 @@
 				B6DCD770255D785800340143 /* RoundedView.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		B6DCD773255D917300340143 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B6DCD774255D91A300340143 /* MyNotifCenter.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +303,7 @@
 			files = (
 				B6DCD74F255C48B500340143 /* LogController.swift in Sources */,
 				B6DCD75B255C601500340143 /* RoundedButton.swift in Sources */,
+				B6DCD775255D91A300340143 /* MyNotifCenter.swift in Sources */,
 				B6DCD761255C651C00340143 /* AlertView.swift in Sources */,
 				B6DCD753255C4AAA00340143 /* FireAuth.swift in Sources */,
 				B6DCD6A0255AEDA100340143 /* AppDelegate.swift in Sources */,
