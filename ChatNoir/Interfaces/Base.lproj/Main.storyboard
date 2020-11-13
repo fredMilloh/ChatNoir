@@ -141,11 +141,28 @@
                         <outlet property="pwdTF" destination="MIc-eu-enB" id="hVP-YI-2iE"/>
                         <outlet property="segmentes" destination="yni-xU-B0c" id="7DQ-Ed-Gqh"/>
                         <outlet property="surnameTF" destination="MEQ-Gi-l7b" id="4Qw-Zb-WgD"/>
+                        <segue destination="6lB-PD-Ctn" kind="show" identifier="ToApp" id="tF2-aB-tXB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="710.14492753623199" y="38.839285714285715"/>
+        </scene>
+        <!--Feed Controller-->
+        <scene sceneID="Q87-hP-XpJ">
+            <objects>
+                <viewController id="6lB-PD-Ctn" customClass="FeedController" customModule="ChatNoir" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ziv-ae-W71">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rOa-ys-cGA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uAm-Ld-hCg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AoQ-bu-vTg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1522" y="39"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wdi-OO-HV4">
@@ -167,6 +184,9 @@
     </scenes>
     <resources>
         <image name="catLaunch" width="1920" height="1280"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -34,7 +34,7 @@ class LogController: RootController {
     func setupUI() {
         if FireAuth().isAuth() {
             // si true on va a la seconde page
-            print("Auth == true")
+            toMain()
         } else {
             // on doit s'authentifier
             updateVisible(true, mailTF)
@@ -62,6 +62,7 @@ class LogController: RootController {
                         }
                         if uid != nil {
                             //vers controller suivant
+                            self.toMain()
                         }
                     }
                 } else {
@@ -75,6 +76,7 @@ class LogController: RootController {
                                 if uid != nil {
                                     let data: [String: Any] = ["name": name, "surname": surname, "uid": uid!]
                                     FireDatabase().addUser(uid!, data: data)
+                                    self.toMain()
                                 }
                             }
                         } else {
@@ -98,6 +100,10 @@ class LogController: RootController {
     
     @IBAction func segmentedChange(_ sender: Any) {
         setupUI()
+    }
+    
+    func toMain() {
+        performSegue(withIdentifier: "ToApp", sender: nil)
     }
  
 // MARKS: retour clavier
