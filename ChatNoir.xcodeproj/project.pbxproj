@@ -26,6 +26,7 @@
 		B6DCD775255D91A300340143 /* MyNotifCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD774255D91A300340143 /* MyNotifCenter.swift */; };
 		B6DCD77B255DB4A700340143 /* FireDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD77A255DB4A700340143 /* FireDatabase.swift */; };
 		B6DCD77E255EDADC00340143 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD77D255EDADC00340143 /* FeedController.swift */; };
+		B6DCD781255EDD8E00340143 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD780255EDD8E00340143 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		B6DCD774255D91A300340143 /* MyNotifCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNotifCenter.swift; sourceTree = "<group>"; };
 		B6DCD77A255DB4A700340143 /* FireDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireDatabase.swift; sourceTree = "<group>"; };
 		B6DCD77D255EDADC00340143 /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
+		B6DCD780255EDD8E00340143 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 			children = (
 				B6DCD751255C4A7900340143 /* FirebaseUtils */,
 				B6DCD774255D91A300340143 /* MyNotifCenter.swift */,
+				B6DCD780255EDD8E00340143 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				B6DCD77B255DB4A700340143 /* FireDatabase.swift in Sources */,
 				B6DCD77E255EDADC00340143 /* FeedController.swift in Sources */,
 				B6DCD764255C663400340143 /* Enums.swift in Sources */,
+				B6DCD781255EDD8E00340143 /* Constants.swift in Sources */,
 				B6DCD771255D785800340143 /* RoundedView.swift in Sources */,
 				B6DCD75E255C645B00340143 /* RootController.swift in Sources */,
 			);

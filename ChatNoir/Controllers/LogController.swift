@@ -74,27 +74,27 @@ class LogController: RootController {
                                     self.showAlert(error, .error)
                                 }
                                 if uid != nil {
-                                    let data: [String: Any] = ["name": name, "surname": surname, "uid": uid!]
+                                    let data: [String: Any] = [KEY_NAME: name, KEY_SURNAME: surname, KEY_UID: uid!]
                                     FireDatabase().addUser(uid!, data: data)
                                     self.toMain()
                                 }
                             }
                         } else {
                             //Alert pas de name
-                            showAlert("Veuillez entrer votre nom", .error)
+                            showAlert(errorEmpty("nom"), .error)
                         }
                     } else {
                         //Alert pas de surname
-                        showAlert("Veuillez entrer votre prénom", .error)
+                        showAlert(errorEmpty("prénom"), .error)
                     }
                 }
             } else {
                 //alert pas de pwd
-                showAlert("Veuillez entrer votre mot de passe", .error)
+                showAlert(errorEmpty("mot de passe"), .error)
             }
         } else {
             // alert pas de mail
-            showAlert("Veuillez entrer votre adresse mail", .error)
+            showAlert(errorEmpty("adresse mail"), .error)
         }
     }
     
@@ -103,7 +103,7 @@ class LogController: RootController {
     }
     
     func toMain() {
-        performSegue(withIdentifier: "ToApp", sender: nil)
+        performSegue(withIdentifier: SEGUE_APP, sender: nil)
     }
  
 // MARKS: retour clavier
