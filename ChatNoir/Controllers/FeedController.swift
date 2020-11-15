@@ -35,7 +35,17 @@ class FeedController: UIViewController {
                 self.menuButton.alpha = 1
                 self.menuButton.transform = CGAffineTransform(scaleX: 1.25, y: 1.25)
             } completion: { (success) in
-                //
+                UIView.animate(withDuration: 0.25) {
+                    self.menuButton.transform = CGAffineTransform.identity
+                } completion: { (success) in
+                    UIView.animate(withDuration: 0.25) {
+                        self.menuButton.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi / 4))
+                    } completion: { (success) in
+                        //
+                    }
+
+                }
+
             }
 
         }
