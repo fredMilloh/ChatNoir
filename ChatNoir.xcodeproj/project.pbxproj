@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5C8F2417B0F5C49381B01026 /* Pods_ChatNoir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1693D53B8DA2BD19E0FF3E6A /* Pods_ChatNoir.framework */; };
+		B6CC599B25619C2D008986D4 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC599A25619C2D008986D4 /* Animations.swift */; };
 		B6DCD6A0255AEDA100340143 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD69F255AEDA100340143 /* AppDelegate.swift */; };
 		B6DCD6A2255AEDA100340143 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD6A1255AEDA100340143 /* SceneDelegate.swift */; };
 		B6DCD6A7255AEDA100340143 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6DCD6A5255AEDA100340143 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		1693D53B8DA2BD19E0FF3E6A /* Pods_ChatNoir.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatNoir.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA74AD02F54695574D5BF62 /* Pods-ChatNoir.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatNoir.debug.xcconfig"; path = "Target Support Files/Pods-ChatNoir/Pods-ChatNoir.debug.xcconfig"; sourceTree = "<group>"; };
 		5758A7C3B6FADA7B5276A150 /* Pods-ChatNoir.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatNoir.release.xcconfig"; path = "Target Support Files/Pods-ChatNoir/Pods-ChatNoir.release.xcconfig"; sourceTree = "<group>"; };
+		B6CC599A25619C2D008986D4 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		B6DCD69C255AEDA100340143 /* ChatNoir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatNoir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6DCD69F255AEDA100340143 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6DCD6A1255AEDA100340143 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				B6DCD763255C663400340143 /* Enums.swift */,
+				B6CC599A25619C2D008986D4 /* Animations.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				B6DCD77B255DB4A700340143 /* FireDatabase.swift in Sources */,
 				B6DCD77E255EDADC00340143 /* FeedController.swift in Sources */,
 				B6DCD764255C663400340143 /* Enums.swift in Sources */,
+				B6CC599B25619C2D008986D4 /* Animations.swift in Sources */,
 				B6DCD781255EDD8E00340143 /* Constants.swift in Sources */,
 				B6DCD771255D785800340143 /* RoundedView.swift in Sources */,
 				B6DCD75E255C645B00340143 /* RootController.swift in Sources */,

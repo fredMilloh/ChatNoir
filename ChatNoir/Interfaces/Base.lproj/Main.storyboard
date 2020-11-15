@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YVz-W0-xug">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YVz-W0-xug">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -201,10 +201,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S1p-cn-HD9">
                                 <rect key="frame" x="0.0" y="821" width="414" height="75"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYA-pc-JFf">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYA-pc-JFf" customClass="RoundedView" customModule="ChatNoir" customModuleProvider="target">
                                         <rect key="frame" x="182" y="0.0" width="50" height="50"/>
                                         <subviews>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocW-s7-LYR">
+                                            <button opaque="NO" alpha="0.0" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocW-s7-LYR">
                                                 <rect key="frame" x="4" y="4" width="42" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="jxh-gW-hac"/>
@@ -215,7 +215,7 @@
                                                     <action selector="menuPressed:" destination="6lB-PD-Ctn" eventType="touchUpInside" id="BGj-nc-Whp"/>
                                                 </connections>
                                             </button>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5j-ea-ASB">
+                                            <button opaque="NO" alpha="0.0" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5j-ea-ASB">
                                                 <rect key="frame" x="4" y="4" width="42" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="i28-BC-ovs"/>
@@ -226,7 +226,7 @@
                                                     <action selector="menuPressed:" destination="6lB-PD-Ctn" eventType="touchUpInside" id="Npt-nO-EXx"/>
                                                 </connections>
                                             </button>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mb-wz-aJf">
+                                            <button opaque="NO" alpha="0.0" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mb-wz-aJf">
                                                 <rect key="frame" x="4" y="4" width="42" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="i6l-Pb-9vs"/>
@@ -237,7 +237,7 @@
                                                     <action selector="menuPressed:" destination="6lB-PD-Ctn" eventType="touchUpInside" id="ngf-Ct-FAg"/>
                                                 </connections>
                                             </button>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbf-V5-R0X">
+                                            <button opaque="NO" alpha="0.0" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbf-V5-R0X">
                                                 <rect key="frame" x="4" y="4" width="42" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="42" id="KCz-u3-Cyl"/>
@@ -254,6 +254,7 @@
                                                     <constraint firstAttribute="width" constant="42" id="0u1-U5-sSt"/>
                                                     <constraint firstAttribute="height" constant="42" id="cPd-kd-JNN"/>
                                                 </constraints>
+                                                <color key="tintColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="add"/>
                                                 <connections>
                                                     <action selector="menuPressed:" destination="6lB-PD-Ctn" eventType="touchUpInside" id="1ot-UX-L8c"/>
@@ -316,6 +317,10 @@
                         <outlet property="picker" destination="tZY-eW-TFf" id="Cl2-9O-9C7"/>
                         <outlet property="profileButton" destination="0mb-wz-aJf" id="2JI-DQ-EV4"/>
                         <outlet property="segmented" destination="uZf-D8-O2X" id="AtZ-bD-StE"/>
+                        <outletCollection property="listButton" destination="ocW-s7-LYR" collectionClass="NSMutableArray" id="fqM-lb-4dA"/>
+                        <outletCollection property="listButton" destination="u5j-ea-ASB" collectionClass="NSMutableArray" id="ZkP-vk-ZFB"/>
+                        <outletCollection property="listButton" destination="0mb-wz-aJf" collectionClass="NSMutableArray" id="FL9-hP-o0u"/>
+                        <outletCollection property="listButton" destination="cbf-V5-R0X" collectionClass="NSMutableArray" id="Fiq-sW-9xT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AoQ-bu-vTg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
