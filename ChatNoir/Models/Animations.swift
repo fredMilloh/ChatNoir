@@ -22,6 +22,12 @@ class Animations {
             view.alpha = targetAlpha
             view.center.x = pointX
         }
+    }
+    
+    func moveViews(_ view: UIView, _ y: CGFloat) {
+        UIView.animate(withDuration: 0.5) {
+            view.center.y += y
+        } 
 
     }
 }

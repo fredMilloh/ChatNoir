@@ -25,6 +25,8 @@ class FeedController: UIViewController {
     var isMenuOpen = false
     var baseFrame: CGRect?
     
+    var settingsView: SettingsView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -84,15 +86,19 @@ class FeedController: UIViewController {
                 case 1: print("Write")
                 case 2: print("Notif")
                 case 3: print("profile")
-                case 4: print("Settings")
+                case 4: self.showSettings()
                 default: break
                 }
             }
 
         }
-
-        
-        
+    }
+    
+    func showSettings() {
+        let settingsFrame = CGRect(x: 20, y: self.view.frame.height * 1.5, width: self.view.frame.width - 40, height: 250)
+        settingsView = SettingsView(frame: settingsFrame)
+        view.addSubview(settingsView!)
+        Animations().moveViews(settingsView!, -self.view.frame.height)
     }
     @IBAction func segmentedPressed(_ sender: Any) {
     }

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5C8F2417B0F5C49381B01026 /* Pods_ChatNoir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1693D53B8DA2BD19E0FF3E6A /* Pods_ChatNoir.framework */; };
 		B6CC599B25619C2D008986D4 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC599A25619C2D008986D4 /* Animations.swift */; };
+		B6CC59AA2562CD48008986D4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC59A92562CD48008986D4 /* SettingsView.swift */; };
+		B6CC59AD2562CD89008986D4 /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6CC59AC2562CD89008986D4 /* SettingsView.xib */; };
 		B6DCD6A0255AEDA100340143 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD69F255AEDA100340143 /* AppDelegate.swift */; };
 		B6DCD6A2255AEDA100340143 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD6A1255AEDA100340143 /* SceneDelegate.swift */; };
 		B6DCD6A7255AEDA100340143 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6DCD6A5255AEDA100340143 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 		1FA74AD02F54695574D5BF62 /* Pods-ChatNoir.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatNoir.debug.xcconfig"; path = "Target Support Files/Pods-ChatNoir/Pods-ChatNoir.debug.xcconfig"; sourceTree = "<group>"; };
 		5758A7C3B6FADA7B5276A150 /* Pods-ChatNoir.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatNoir.release.xcconfig"; path = "Target Support Files/Pods-ChatNoir/Pods-ChatNoir.release.xcconfig"; sourceTree = "<group>"; };
 		B6CC599A25619C2D008986D4 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		B6CC59A92562CD48008986D4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B6CC59AC2562CD89008986D4 /* SettingsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsView.xib; sourceTree = "<group>"; };
 		B6DCD69C255AEDA100340143 /* ChatNoir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatNoir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6DCD69F255AEDA100340143 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6DCD6A1255AEDA100340143 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 			children = (
 				B6DCD760255C651C00340143 /* AlertView.swift */,
 				B6DCD766255C68AE00340143 /* LoadableView.swift */,
+				B6CC59A92562CD48008986D4 /* SettingsView.swift */,
 			);
 			path = "Loadable Views";
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 				B6DCD6A5255AEDA100340143 /* Main.storyboard */,
 				B6DCD6AA255AEDA300340143 /* LaunchScreen.storyboard */,
 				B6DCD76B255C6D8F00340143 /* AlertView.xib */,
+				B6CC59AC2562CD89008986D4 /* SettingsView.xib */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -259,6 +265,7 @@
 				B6DCD6AC255AEDA300340143 /* LaunchScreen.storyboard in Resources */,
 				B6DCD6A9255AEDA300340143 /* Assets.xcassets in Resources */,
 				B6DCD76C255C6D8F00340143 /* AlertView.xib in Resources */,
+				B6CC59AD2562CD89008986D4 /* SettingsView.xib in Resources */,
 				B6DCD6A7255AEDA100340143 /* Main.storyboard in Resources */,
 				B6DCD6DA255B129F00340143 /* GoogleService-Info.plist in Resources */,
 			);
@@ -322,6 +329,7 @@
 				B6DCD6A2255AEDA100340143 /* SceneDelegate.swift in Sources */,
 				B6DCD767255C68AE00340143 /* LoadableView.swift in Sources */,
 				B6DCD77B255DB4A700340143 /* FireDatabase.swift in Sources */,
+				B6CC59AA2562CD48008986D4 /* SettingsView.swift in Sources */,
 				B6DCD77E255EDADC00340143 /* FeedController.swift in Sources */,
 				B6DCD764255C663400340143 /* Enums.swift in Sources */,
 				B6CC599B25619C2D008986D4 /* Animations.swift in Sources */,
