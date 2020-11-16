@@ -15,6 +15,9 @@ let KEY_NAME = "name"
 let KEY_SURNAME = "surname"
 let KEY_UID = "uid"
 
+//UD
+let UD_NIGHT = "night"
+
 //Functions
 func errorEmpty(_ string: String) -> String {
     return "Veuillez entrer votre " + string

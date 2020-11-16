@@ -24,10 +24,17 @@ class Animations {
         }
     }
     
-    func moveViews(_ view: UIView, _ y: CGFloat) {
+    func moveViews(_ view: UIView, _ y: CGFloat, _ shouldRemove: Bool) {
+        
         UIView.animate(withDuration: 0.5) {
             view.center.y += y
-        } 
+        } completion: { (success) in
+            if shouldRemove {
+                view.removeFromSuperview()
+                //view = nil
+            }
+        }
+
 
     }
 }

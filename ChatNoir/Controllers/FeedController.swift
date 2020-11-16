@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FeedController: UIViewController {
+class FeedController: MainController {
     
     @IBOutlet weak var segmented: UISegmentedControl!
     @IBOutlet weak var picker: UIPickerView!
@@ -98,7 +98,7 @@ class FeedController: UIViewController {
         let settingsFrame = CGRect(x: 20, y: self.view.frame.height * 1.5, width: self.view.frame.width - 40, height: 250)
         settingsView = SettingsView(frame: settingsFrame)
         view.addSubview(settingsView!)
-        Animations().moveViews(settingsView!, -self.view.frame.height)
+        Animations().moveViews(settingsView!, -self.view.frame.height, false)
     }
     @IBAction func segmentedPressed(_ sender: Any) {
     }
