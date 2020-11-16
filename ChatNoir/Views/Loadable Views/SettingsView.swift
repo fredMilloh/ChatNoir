@@ -41,4 +41,8 @@ class SettingsView:LoadableView {
         setupData()
         MyNotifCenter().post("night", nil)
     }
+    
+    @IBAction func disconnectPressed(_ sender: Any) {
+        MyNotifCenter().post("disconnect", nil)
+    }
 }

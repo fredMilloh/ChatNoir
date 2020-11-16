@@ -29,6 +29,7 @@ class FeedController: MainController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        MyNotifCenter().receiveNotif("disconnect", self, #selector(disconnect))
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -92,6 +93,10 @@ class FeedController: MainController {
             }
 
         }
+    }
+    
+    @objc func disconnect() {
+        showAlert(nil, .disconnect)
     }
     
     func showSettings() {

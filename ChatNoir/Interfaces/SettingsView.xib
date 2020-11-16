@@ -73,6 +73,9 @@
                             <state key="normal" title="Se déconnecter">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="disconnectPressed:" destination="-1" eventType="touchUpInside" id="zkR-Xo-628"/>
+                            </connections>
                         </button>
                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jwm-uj-J0l">
                             <rect key="frame" x="345" y="137" width="51" height="31"/>

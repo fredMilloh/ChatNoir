@@ -23,6 +23,7 @@ class RootController: UIViewController {
         alertView = AlertView(frame: view.bounds)
         switch type {
         case .error: alertView?.setupError(message ?? "")
+        case .disconnect: alertView?.setupDisconnect(self)
         default: break
         }
         view.addSubview(alertView!)

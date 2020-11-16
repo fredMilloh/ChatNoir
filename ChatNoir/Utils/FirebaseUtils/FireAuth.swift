@@ -29,7 +29,14 @@ class FireAuth {
         self.completion = completion
         auth.createUser(withEmail: mail, password: pwd, completion: handleResult(_:_:))
     }
-    func signOut() {
+    func signOut() -> Bool{
+        do {
+            try auth.signOut()
+            return true
+        } catch {
+            print(error.localizedDescription)
+            return false
+        }
         
     }
     
