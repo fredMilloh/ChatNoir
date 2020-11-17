@@ -10,6 +10,11 @@ import Foundation
 //Segues
 let SEGUE_APP = "ToApp"
 let SEGUE_PROFILE = "ToProfile"
+
+//Identifiers
+let HEADER_ID = "HeaderView"
+let POST_ID = "PostCell"
+let NOTIF_ID = "NotifCell"
  
 //Keys
 let KEY_NAME = "name"
