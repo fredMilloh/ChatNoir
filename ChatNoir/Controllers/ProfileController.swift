@@ -17,7 +17,7 @@ class ProfileController: UIViewController {
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
-        
+        collectionView.collectionViewLayout = HeaderLayout()
     }
 
 }
