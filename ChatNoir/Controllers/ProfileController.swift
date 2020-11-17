@@ -51,4 +51,12 @@ extension ProfileController: UICollectionViewDelegate, UICollectionViewDataSourc
         return CGSize(width: collectionView.frame.width, height: 200)
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y < -44 {
+            headerView?.blur.isHidden = false
+        } else {
+            headerView?.blur.isHidden = true
+        }
+    }
+    
 }
