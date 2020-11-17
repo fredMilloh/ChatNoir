@@ -86,7 +86,7 @@ class FeedController: MainController {
                 switch tag {
                 case 1: print("Write")
                 case 2: print("Notif")
-                case 3: print("profile")
+                case 3: self.performSegue(withIdentifier: SEGUE_PROFILE, sender: nil)
                 case 4: self.showSettings()
                 default: break
                 }

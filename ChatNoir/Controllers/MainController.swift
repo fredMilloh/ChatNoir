@@ -19,4 +19,12 @@ class MainController: RootController {
     @objc func setupNight() {
         view.backgroundColor = UD().getNight() ? .black : .white
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == SEGUE_PROFILE {
+            if let next = segue.destination as? ProfileController {
+                
+            }
+        }
+    }
+    
 }

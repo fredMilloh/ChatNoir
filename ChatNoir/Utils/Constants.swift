@@ -9,6 +9,7 @@ import Foundation
 
 //Segues
 let SEGUE_APP = "ToApp"
+let SEGUE_PROFILE = "ToProfile"
  
 //Keys
 let KEY_NAME = "name"
