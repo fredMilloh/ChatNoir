@@ -370,14 +370,29 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="og5-Xw-GIU">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PostCell" id="og5-Xw-GIU" customClass="PostCell" customModule="ChatNoir" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="200" width="414" height="273"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="M25-eD-0nc">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="273"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mm5-5t-Z7u">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="273"/>
+                                                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Mm5-5t-Z7u" firstAttribute="top" secondItem="M25-eD-0nc" secondAttribute="top" id="GM5-ad-4Ch"/>
+                                                <constraint firstAttribute="trailing" secondItem="Mm5-5t-Z7u" secondAttribute="trailing" id="jkP-oQ-RUM"/>
+                                                <constraint firstItem="Mm5-5t-Z7u" firstAttribute="leading" secondItem="M25-eD-0nc" secondAttribute="leading" id="vaA-2N-ahg"/>
+                                                <constraint firstAttribute="bottom" secondItem="Mm5-5t-Z7u" secondAttribute="bottom" id="ypb-or-zXN"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="273"/>
+                                        <connections>
+                                            <outlet property="containerView" destination="Mm5-5t-Z7u" id="6zC-ub-8TS"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderView" id="JAx-i7-9Sg" customClass="HeaderView" customModule="ChatNoir" customModuleProvider="target">
@@ -470,11 +485,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="lSW-dy-Gal"/>
                     <connections>
-                        <outlet property="blur" destination="NdJ-6i-99e" id="Se7-H2-do6"/>
                         <outlet property="collectionView" destination="LCp-oD-T0f" id="Ieh-Cf-2FT"/>
-                        <outlet property="coverIV" destination="Fmq-eh-bjp" id="g1v-SC-xfX"/>
-                        <outlet property="nameLbl" destination="kKH-Gx-aIY" id="Et3-oI-Rcq"/>
-                        <outlet property="profileIV" destination="MsS-GR-8ZX" id="Vfq-nt-JQN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2mS-Oz-arx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -517,6 +528,9 @@
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
