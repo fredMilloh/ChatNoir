@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HeaderView: UICollectionReusableView {
     
@@ -20,6 +21,8 @@ class HeaderView: UICollectionReusableView {
         guard user != nil else { return }
         self.user = user
         nameLbl.text = self.user!.surname + " " + self.user!.name
+        ImageLoader().load(self.user!.imageUrl, profileIV)
+        ImageLoader().load(self.user!.coverUrl, coverIV)
     }
     
 }
