@@ -12,5 +12,10 @@ enum AlertType {
     case camera
     case disconnect
     case changeName
-    
+}
+
+enum PhotoType {
+    case profile
+    case cover
+    case post 
 }

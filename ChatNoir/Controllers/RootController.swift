@@ -28,6 +28,16 @@ class RootController: UIViewController {
         }
         view.addSubview(alertView!)
     }
+    
+    func cameraAlert(_ picker: UIImagePickerController, _ controller: MainController) {
+        if alertView != nil {
+            closeAlert()
+        }
+        alertView = AlertView(frame: view.bounds)
+        alertView?.setupCamera(controller, picker)
+        view.addSubview(alertView!)
+    }
+    
     @objc func closeAlert() {
         alertView?.removeFromSuperview()
         alertView = nil

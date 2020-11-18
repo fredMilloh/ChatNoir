@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileController: UIViewController {
+class ProfileController: MainController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -20,6 +20,7 @@ class ProfileController: UIViewController {
         collectionView.delegate = self
         collectionView.collectionViewLayout = HeaderLayout()
         getUser()
+        setupPicker()
     }
     
     func getUser() {
@@ -56,7 +57,7 @@ extension ProfileController: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HEADER_ID, for: indexPath) as? HeaderView
-        headerView?.setup(user)
+        headerView?.setup(user, self)
         return headerView!
     }
     
