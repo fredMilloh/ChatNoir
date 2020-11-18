@@ -20,6 +20,8 @@ let NOTIF_ID = "NotifCell"
 let KEY_NAME = "name"
 let KEY_SURNAME = "surname"
 let KEY_UID = "uid"
+let KEY_IMAGEURL = "imageUrl"
+let KEY_COVERURL = "coverUrl"
 
 //UD
 let UD_NIGHT = "night"
@@ -28,3 +30,8 @@ let UD_NIGHT = "night"
 func errorEmpty(_ string: String) -> String {
     return "Veuillez entrer votre " + string
 }
+
+// Typealiases
+
+typealias UserCompletion = (_ user: User?) -> Void
+

@@ -12,12 +12,22 @@ class ProfileController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var headerView: HeaderView?
+    var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.collectionViewLayout = HeaderLayout()
+        getUser()
+    }
+    
+    func getUser() {
+        FireDatabase().getMe { (user) in
+            if let new = user {
+                print("Nouveau => " + new.name)
+                self.user = new }
+        }
     }
 
 }

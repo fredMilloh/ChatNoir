@@ -19,6 +19,10 @@ class FireAuth {
         return Auth.auth().currentUser?.uid != nil
     }
     
+    func myId() -> String? {
+        return auth.currentUser?.uid
+    }
+    
     func signIn(_ mail: String, _ pwd: String, completion: ((_ uid: String?, _ error: String?) -> Void)?) {
         self.completion = completion
         auth.signIn(withEmail: mail, password: pwd, completion: handleResult(_:_:))
