@@ -26,7 +26,9 @@ class ProfileController: UIViewController {
         FireDatabase().getMe { (user) in
             if let new = user {
                 print("Nouveau => " + new.name)
-                self.user = new }
+                self.user = new
+                self.collectionView.reloadData()
+            }
         }
     }
 
@@ -54,6 +56,7 @@ extension ProfileController: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HEADER_ID, for: indexPath) as? HeaderView
+        headerView?.setup(user)
         return headerView!
     }
     

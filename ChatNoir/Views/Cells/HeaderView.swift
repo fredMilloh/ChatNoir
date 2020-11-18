@@ -14,4 +14,12 @@ class HeaderView: UICollectionReusableView {
     @IBOutlet weak var nameLbl:UILabel!
     @IBOutlet weak var blur: UIVisualEffectView!
     
+    var user: User?
+    
+    func setup(_ user: User?) {
+        guard user != nil else { return }
+        self.user = user
+        nameLbl.text = self.user!.surname + " " + self.user!.name
+    }
+    
 }
