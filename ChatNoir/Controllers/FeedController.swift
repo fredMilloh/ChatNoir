@@ -96,7 +96,7 @@ class FeedController: MainController {
     }
     
     @objc func disconnect() {
-        showAlert(nil, .disconnect)
+        showAlert(nil, nil, .disconnect)
     }
     
     func showSettings() {

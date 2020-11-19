@@ -10,7 +10,7 @@ import SDWebImage
 
 class HeaderView: UICollectionReusableView {
     
-    @IBOutlet weak var profileIV: UIImageView!
+    @IBOutlet weak var profileIV: ProfileIV!
     @IBOutlet weak var coverIV: UIImageView!
     @IBOutlet weak var nameLbl:UILabel!
     @IBOutlet weak var blur: UIVisualEffectView!
@@ -42,6 +42,7 @@ class HeaderView: UICollectionReusableView {
             controller!.cameraAlert(controller!.imagePicker!, controller!)
         } else if touch.view == nameLbl {
             //Alerte pour changer le nom
+            controller?.showAlert(nil, user, .changeName)
         } else {
             // Alerte pour cover
             controller!.photoType = .cover

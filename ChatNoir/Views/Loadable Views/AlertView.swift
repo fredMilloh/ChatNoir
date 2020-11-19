@@ -13,10 +13,17 @@ class AlertView: LoadableView {
     @IBOutlet weak var messageLbl: UILabel!
     @IBOutlet weak var btn1: UIButton!
     @IBOutlet weak var btn2: UIButton!
+    @IBOutlet weak var surnameTF: UITextField!
+    @IBOutlet weak var nameTF: UITextField!
     
     var type: AlertType = .error
     var controller: UIViewController?
     var imagePicker: UIImagePickerController?
+    
+    //pour faire cacher le clavier quand on appui ailleur
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        endEditing(true)
+    }
     
     func setupError(_ message: String) {
         titleLbl.text = "Une erreur est survenue"
@@ -48,11 +55,25 @@ class AlertView: LoadableView {
         btn2.setImage(UIImage(named: "gallery"), for: .normal)
     }
     
+    func setupName(_ user: User?) {
+        guard user != nil else { return }
+        type = .changeName
+        messageLbl.isHidden = true
+        surnameTF.isHidden = false
+        nameTF.isHidden = false
+        titleLbl.text = "Changer le nom et prénom"
+        surnameTF.placeholder = user!.surname
+        nameTF.placeholder = user!.name
+        btn1.isHidden = true
+        btn2.isHidden = false
+        btn2.setTitle("OK", for: .normal)
+    }
+    
     func handleButton(_ isButton1: Bool) {
         switch type {
         case .disconnect:
             if isButton1 {
-                MyNotifCenter().post("cancel", nil)
+                MyNotifCenter().post("cancel", nil)   //pour faire disparaitre l'alerte
             } else {
                 if FireAuth().signOut() {
                     controller?.navigationController?.popToRootViewController(animated: true)
@@ -64,6 +85,20 @@ class AlertView: LoadableView {
             guard imagePicker != nil else { return }
             imagePicker!.sourceType = isButton1 ? .camera : .photoLibrary
             controller?.present(imagePicker!, animated: true, completion: nil)
+        case .changeName:
+            guard let uid = FireAuth().myId() else { return }
+            if isButton1 { break }
+            else {
+                var dict: [String: Any] = [:]
+                if let name = nameTF.text, name != "" {
+                    dict[KEY_NAME] = name
+                }
+                if let surname = surnameTF.text, surname != "" {
+                    dict[KEY_SURNAME] = surname
+                }
+                FireDatabase().updateUser(uid, data: dict)
+                MyNotifCenter().post("cancel", nil)
+            }
         default: break
         }
     }

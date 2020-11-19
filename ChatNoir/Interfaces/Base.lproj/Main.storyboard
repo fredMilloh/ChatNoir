@@ -431,7 +431,7 @@
                                                 <constraint firstAttribute="width" constant="128" id="yp4-vn-C7A"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="kKH-Gx-aIY">
+                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="kKH-Gx-aIY">
                                             <rect key="frame" x="144" y="132" width="262" height="60"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="60" id="fI5-ov-KWq"/>

@@ -58,7 +58,7 @@ class LogController: RootController {
                     //Authentification
                     FireAuth().signIn(mail, pwd) { (uid, error) in
                         if error != nil {
-                            self.showAlert(error, .error)
+                            self.showAlert(error, nil, .error)
                         }
                         if uid != nil {
                             //vers controller suivant
@@ -71,7 +71,7 @@ class LogController: RootController {
                             //Création compte
                             FireAuth().createUser(mail, pwd) { (uid, error) in
                                 if error != nil {
-                                    self.showAlert(error, .error)
+                                    self.showAlert(error, nil, .error)
                                 }
                                 if uid != nil {
                                     let data: [String: Any] = [KEY_NAME: name, KEY_SURNAME: surname, KEY_UID: uid!]
@@ -81,20 +81,20 @@ class LogController: RootController {
                             }
                         } else {
                             //Alert pas de name
-                            showAlert(errorEmpty("nom"), .error)
+                            showAlert(errorEmpty("nom"), nil, .error)
                         }
                     } else {
                         //Alert pas de surname
-                        showAlert(errorEmpty("prénom"), .error)
+                        showAlert(errorEmpty("prénom"), nil, .error)
                     }
                 }
             } else {
                 //alert pas de pwd
-                showAlert(errorEmpty("mot de passe"), .error)
+                showAlert(errorEmpty("mot de passe"), nil, .error)
             }
         } else {
             // alert pas de mail
-            showAlert(errorEmpty("adresse mail"), .error)
+            showAlert(errorEmpty("adresse mail"), nil, .error)
         }
     }
     

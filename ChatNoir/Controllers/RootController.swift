@@ -16,7 +16,7 @@ class RootController: UIViewController {
         MyNotifCenter().receiveNotif("cancel", self, #selector(closeAlert))
     }
     
-    func showAlert(_ message: String?, _ type: AlertType) {
+    func showAlert(_ message: String?, _ user: User?, _ type: AlertType) {
         if alertView != nil {
             closeAlert()
         }
@@ -24,6 +24,7 @@ class RootController: UIViewController {
         switch type {
         case .error: alertView?.setupError(message ?? "")
         case .disconnect: alertView?.setupDisconnect(self)
+        case .changeName: alertView?.setupName(user)
         default: break
         }
         view.addSubview(alertView!)
