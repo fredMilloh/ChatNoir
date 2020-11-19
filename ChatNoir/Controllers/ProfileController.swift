@@ -32,7 +32,12 @@ class ProfileController: MainController {
             }
         }
     }
-
+    
+    
+    @IBAction func cancelPressed(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }
 extension ProfileController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     

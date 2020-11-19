@@ -362,7 +362,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LCp-oD-T0f">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Kmv-tg-oBu">
                                     <size key="itemSize" width="414" height="273"/>
                                     <size key="headerReferenceSize" width="50" height="200"/>
@@ -389,6 +389,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="Mm5-5t-Z7u" secondAttribute="bottom" id="ypb-or-zXN"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="customSize" width="414" height="273"/>
                                         <connections>
                                             <outlet property="containerView" destination="Mm5-5t-Z7u" id="6zC-ub-8TS"/>
@@ -440,6 +441,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="kKH-Gx-aIY" secondAttribute="trailing" id="0IY-Kw-gMX"/>
                                         <constraint firstAttribute="bottom" secondItem="NdJ-6i-99e" secondAttribute="bottom" id="778-af-Saq"/>
@@ -470,10 +472,13 @@
                                     <constraint firstAttribute="width" constant="42" id="xUE-lu-bq1"/>
                                 </constraints>
                                 <state key="normal" image="cancel"/>
+                                <connections>
+                                    <action selector="cancelPressed:" destination="dbm-l8-fBO" eventType="touchUpInside" id="oA3-D5-nZL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="f68-th-D1K"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="LCp-oD-T0f" firstAttribute="trailing" secondItem="f68-th-D1K" secondAttribute="trailing" id="1UT-hX-jMs"/>
                             <constraint firstItem="LCp-oD-T0f" firstAttribute="top" secondItem="ZrW-2I-rer" secondAttribute="top" id="ZI0-8D-tYZ"/>
