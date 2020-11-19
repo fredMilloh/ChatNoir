@@ -34,4 +34,4 @@ func errorEmpty(_ string: String) -> String {
 // Typealiases
 
 typealias UserCompletion = (_ user: User?) -> Void
-
+typealias ImageUploadCompletion = (_ urlString: String?, _ error: Error?) -> Void

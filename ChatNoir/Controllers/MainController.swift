@@ -49,9 +49,20 @@ extension MainController: UIImagePickerControllerDelegate, UINavigationControlle
         closeAlert()
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             switch photoType {
+            case .cover, .profile: updateProfile(image)
             case .post: print("post")
-            case .profile: print("profile")
-            case .cover: print("cover")
+            }
+        }
+    }
+    
+    func updateProfile(_ image: UIImage) {
+        guard let uid = FireAuth().myId() else { return }
+        let ref = photoType == .cover ? FireStorage().userCover(uid) : FireStorage().userProfile(uid)
+        FireStorage().sendImageToFirebase(ref, image) { (string, error) in
+            if error != nil { print(error!.localizedDescription) }
+            if let urlString = string {
+                let key = self.photoType == .cover ? KEY_COVERURL : KEY_IMAGEURL
+                FireDatabase().updateUser(uid, data: [key: urlString])
             }
         }
     }

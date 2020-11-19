@@ -35,19 +35,17 @@ class HeaderView: UICollectionReusableView {
         guard let myId = FireAuth().myId(), myId == myUser.uid else { return }
         guard controller != nil else { return }
         guard controller!.imagePicker != nil else { return }
-        //on affecte un évenement au élement touchable du header
+        //on affecte un évenement a l'élement touchable du header
         if touch.view == profileIV {
             //Montrer Alerte pour changer Profil
             controller!.photoType = .profile
             controller!.cameraAlert(controller!.imagePicker!, controller!)
-        } else if touch.view == coverIV {
-            // Alerte pour cover
-            controller!.photoType = .cover
-            controller!.cameraAlert(controller!.imagePicker!, controller!)
         } else if touch.view == nameLbl {
             //Alerte pour changer le nom
         } else {
-            return
+            // Alerte pour cover
+            controller!.photoType = .cover
+            controller!.cameraAlert(controller!.imagePicker!, controller!)
         } //pour acceder au Alerte, on rajoute un argument controller à setup()
     }
     

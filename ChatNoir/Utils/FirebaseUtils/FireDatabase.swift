@@ -19,11 +19,16 @@ class FireDatabase {
     var postsCollection: CollectionReference {
         return base.collection("posts")
     }
-    
+//func pour ajouter un user (efface et met en place)
     func addUser(_ uid: String, data: [String: Any]) {
         userCollection.document(uid).setData(data)
     }
-    //func pour recupérer les data du user, besoin d'une complétion, pour afficher résultats une fois récupérer
+//func pour mettre à jour un user
+    func updateUser(_ uid: String, data: [String: Any]) {
+        userCollection.document(uid).updateData(data)
+    }
+    
+//func pour recupérer les data du user, besoin d'une complétion, pour afficher résultats une fois récupérer
     //ici complétion en typealias UserCompletion dans les constantes
     func getMe(completion: UserCompletion?) {
         if let uid = FireAuth().myId() {
