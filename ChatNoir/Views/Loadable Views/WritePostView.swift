@@ -13,12 +13,13 @@ class WritePostView: LoadableView {
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var imageTaken: UIImageView!
     
-    var controller: MainController!
+    var controller: FeedController!
     var heightToMove: CGFloat!
     
-    func openAndSetup(_ controller: MainController) {
+    func openAndSetup(_ controller: FeedController) {
         self.controller = controller
-        self.heightToMove = -self.frame.height * 1.5 + 100
+       
+        self.heightToMove = -self.controller.view.frame.height * 1.5 + 100
         Animations().moveViews(self, heightToMove , false)
     }
     

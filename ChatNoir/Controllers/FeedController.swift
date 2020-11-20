@@ -117,6 +117,8 @@ class FeedController: MainController {
         let frame = CGRect(x: 20, y: self.view.frame.height * 1.5, width: self.view.frame.width - 40, height: self.view.frame.height - 200)
         writePostView = WritePostView(frame: frame)
         view.addSubview(writePostView!)
+        //on transfére l'anim dans WritePostView
+        //Animations().moveViews(writePostView!, -self.view.frame.height * 1.5 + 100, false)
         writePostView?.openAndSetup(self)
     }
     
