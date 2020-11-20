@@ -19,3 +19,13 @@ enum PhotoType {
     case cover
     case post 
 }
+
+enum PostCategory: String, CaseIterable {      //permet de retourner un row en string et l'enum en array
+    case none = "Aucune catégorie"
+    case job = "Travail"
+    case family = "Famille"
+    case naughty = "Coquin"
+    case pets = "Animaux de compagnie"
+    case holidays = "Vacances"
+    case friends = "Amis"
+}

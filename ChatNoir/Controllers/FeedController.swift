@@ -136,3 +136,27 @@ class FeedController: MainController {
     
     
 }
+extension FeedController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return PostCategory.allCases.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        //return "Row number => \(row)" // affichera dans le picker Row number => 0 puis Row number => 1 ... 5 fois
+        return PostCategory.allCases[row].rawValue
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        //print("Row Chosen => \(row)")
+        if writePostView != nil {
+            writePostView?.selectedCategory = PostCategory.allCases[row] //pour passer la selection du picker
+        }
+    }
+    
+    
+}

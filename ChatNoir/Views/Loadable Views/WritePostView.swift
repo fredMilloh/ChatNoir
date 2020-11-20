@@ -15,12 +15,14 @@ class WritePostView: LoadableView {
     
     var controller: FeedController!
     var heightToMove: CGFloat!
+    var selectedCategory = PostCategory.none
     
     func openAndSetup(_ controller: FeedController) {
         self.controller = controller
-       
         self.heightToMove = -self.controller.view.frame.height * 1.5 + 100
         Animations().moveViews(self, heightToMove , false)
+        pickerView.delegate = self.controller // on veut que ce soit FeedController qui gére
+        pickerView.dataSource = self.controller
     }
     
     func close() {
@@ -39,3 +41,4 @@ class WritePostView: LoadableView {
     
     
 }
+
