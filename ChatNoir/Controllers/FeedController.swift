@@ -84,6 +84,7 @@ class FeedController: MainController {
                 self.menuView.frame = self.baseFrame ?? CGRect()
             } completion: { (success) in
                 self.isMenuOpen = false
+                self.removeExisting()
                 switch tag {
                 case 1: self.showWrite()
                 case 2: print("Notif")
@@ -100,11 +101,23 @@ class FeedController: MainController {
         showAlert(nil, nil, .disconnect)
     }
     
+    //pour supprimer les vues déjà existantes
+    func removeExisting() {
+        if writePostView != nil {
+            writePostView?.removeFromSuperview()
+            writePostView = nil
+        }
+        if settingsView != nil {
+            settingsView?.removeFromSuperview()
+            settingsView = nil
+        }
+    }
+    
     func showWrite() {
         let frame = CGRect(x: 20, y: self.view.frame.height * 1.5, width: self.view.frame.width - 40, height: self.view.frame.height - 200)
         writePostView = WritePostView(frame: frame)
         view.addSubview(writePostView!)
-        Animations().moveViews(writePostView!, -self.view.frame.height * 1.5 + 100, false)
+        writePostView?.openAndSetup(self)
     }
     
     func showSettings() {
