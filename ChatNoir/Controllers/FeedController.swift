@@ -26,6 +26,7 @@ class FeedController: MainController {
     var baseFrame: CGRect?
     
     var settingsView: SettingsView?
+    var writePostView: WritePostView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,7 +85,7 @@ class FeedController: MainController {
             } completion: { (success) in
                 self.isMenuOpen = false
                 switch tag {
-                case 1: print("Write")
+                case 1: self.showWrite()
                 case 2: print("Notif")
                 case 3: self.performSegue(withIdentifier: SEGUE_PROFILE, sender: nil)
                 case 4: self.showSettings()
@@ -97,6 +98,13 @@ class FeedController: MainController {
     
     @objc func disconnect() {
         showAlert(nil, nil, .disconnect)
+    }
+    
+    func showWrite() {
+        let frame = CGRect(x: 20, y: self.view.frame.height * 1.5, width: self.view.frame.width - 40, height: self.view.frame.height - 200)
+        writePostView = WritePostView(frame: frame)
+        view.addSubview(writePostView!)
+        Animations().moveViews(writePostView!, -self.view.frame.height * 1.5 + 100, false)
     }
     
     func showSettings() {

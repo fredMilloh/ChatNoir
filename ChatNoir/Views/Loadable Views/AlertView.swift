@@ -85,6 +85,7 @@ class AlertView: LoadableView {
             guard imagePicker != nil else { return }
             imagePicker!.sourceType = isButton1 ? .camera : .photoLibrary
             controller?.present(imagePicker!, animated: true, completion: nil)
+            
         case .changeName:
             guard let uid = FireAuth().myId() else { return }
             if isButton1 { break }
