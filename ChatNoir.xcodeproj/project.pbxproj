@@ -163,10 +163,10 @@
 		B6DCD74A255C47E700340143 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B6DCD74E255C48B500340143 /* LogController.swift */,
 				B6DCD75D255C645B00340143 /* RootController.swift */,
-				B6DCD77D255EDADC00340143 /* FeedController.swift */,
+				B6DCD74E255C48B500340143 /* LogController.swift */,
 				B6CC59B22562E4E8008986D4 /* MainController.swift */,
+				B6DCD77D255EDADC00340143 /* FeedController.swift */,
 				B6CC59B5256427B1008986D4 /* ProfileController.swift */,
 			);
 			path = Controllers;

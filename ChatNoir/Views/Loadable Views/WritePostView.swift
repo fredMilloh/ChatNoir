@@ -36,7 +36,18 @@ class WritePostView: LoadableView {
     @IBAction func sendPressed(_ sender: Any) {
     }
     
-    @IBAction func takePicture(_ sender: Any) {
+    @IBAction func takePicture(_ sender: UIButton) {
+        guard let ip = controller.imagePicker else { return }
+        controller.photoType = .post
+        switch sender.tag {
+        case 0:
+            ip.sourceType = .camera
+            controller.present(ip, animated: true, completion: nil)
+        case 1:
+            ip.sourceType = .photoLibrary
+            controller.present(ip, animated: true, completion: nil)
+        default: break
+        }
     }
     
     

@@ -20,11 +20,6 @@ class AlertView: LoadableView {
     var controller: UIViewController?
     var imagePicker: UIImagePickerController?
     
-    //pour faire cacher le clavier quand on appui ailleur
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        endEditing(true)
-    }
-    
     func setupError(_ message: String) {
         titleLbl.text = "Une erreur est survenue"
         messageLbl.text = message

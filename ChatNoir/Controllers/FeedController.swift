@@ -31,6 +31,7 @@ class FeedController: MainController {
     override func viewDidLoad() {
         super.viewDidLoad()
         MyNotifCenter().receiveNotif("disconnect", self, #selector(disconnect))
+        setupPicker()
     }
     
     override func viewDidAppear(_ animated: Bool) {

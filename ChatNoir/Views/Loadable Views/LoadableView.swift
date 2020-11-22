@@ -33,4 +33,9 @@ class LoadableView: UIView {
             return UIView()
         }
     }
+    
+    //pour cacher le clavier quand on appui ailleur pour toutes les vues loadables(alert, writePost)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        endEditing(true)
+    }
 }

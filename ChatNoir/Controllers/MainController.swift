@@ -18,10 +18,11 @@ class MainController: RootController {
         setupNight()
         MyNotifCenter().receiveNotif("night", self, #selector(setupNight))
     }
-    
+// MARK: - SetupPicker
+    //func pour prendre photo ou accès album - appeler dans les controller qui en ont besoin (ex: ProfileC)
     func setupPicker() {
         imagePicker = UIImagePickerController()
-        imagePicker?.allowsEditing = false
+        imagePicker?.allowsEditing = true
         imagePicker?.delegate = self
     }
     
@@ -37,6 +38,9 @@ class MainController: RootController {
     }
     
 }
+
+//MARK: - UIImagePickerController
+
 extension MainController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -50,10 +54,15 @@ extension MainController: UIImagePickerControllerDelegate, UINavigationControlle
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             switch photoType {
             case .cover, .profile: updateProfile(image)
-            case .post: print("post")
+            case .post:
+                if let controller = self as? FeedController {
+                    controller.writePostView?.imageTaken.image = image
+                }
             }
         }
     }
+ 
+//MARK: - updateProfile
     
     func updateProfile(_ image: UIImage) {
         guard let uid = FireAuth().myId() else { return }
