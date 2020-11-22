@@ -33,7 +33,36 @@ class WritePostView: LoadableView {
         close()
     }
     
+    
+    
     @IBAction func sendPressed(_ sender: Any) {
+        guard let uid = FireAuth().myId() else { return }
+        if imageTaken.image != nil || descriptionTV.text != "" {
+            let emptyArray: [String] = []
+            let date = Date().timeIntervalSince1970
+            var data: [String: Any] = [
+                KEY_TEXT: descriptionTV.text!,
+                KEY_DATE: date,
+                KEY_CAT: emptyArray,
+                KEY_FOX: emptyArray,
+                KEY_UID: uid
+            ]
+            if imageTaken.image == nil {
+                FireDatabase().addPost(data)
+                print("post envoyé")
+            } else {
+                let ref = FireStorage().post(uid, timeStamp: date)
+                FireStorage().sendImageToFirebase(ref, imageTaken.image!) { (string, error) in
+                    if let urlString = string {
+                        data[KEY_IMAGEURL] = urlString
+                        FireDatabase().addPost(data)
+                        print("post envoyé")
+                    }
+                }
+            }
+        } else {
+            controller.showAlert("Il n'y a pas de photo ou post à envoyer", nil, .error)
+        }
     }
     
     @IBAction func takePicture(_ sender: UIButton) {

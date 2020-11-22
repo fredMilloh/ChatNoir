@@ -22,6 +22,10 @@ let KEY_SURNAME = "surname"
 let KEY_UID = "uid"
 let KEY_IMAGEURL = "imageUrl"
 let KEY_COVERURL = "coverUrl"
+let KEY_TEXT = "text"
+let KEY_DATE = "date"
+let KEY_CAT = "cat"
+let KEY_FOX = "fox"
 
 //UD
 let UD_NIGHT = "night"

@@ -48,4 +48,8 @@ class FireDatabase {
             completion?(nil)
         }
     }
+    
+    func addPost(_ data: [String: Any]) {
+        postsCollection.document().setData(data)
+    }
 }
