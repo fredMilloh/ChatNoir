@@ -38,10 +38,12 @@ class WritePostView: LoadableView {
     @IBAction func sendPressed(_ sender: Any) {
         guard let uid = FireAuth().myId() else { return }
         if imageTaken.image != nil || descriptionTV.text != "" {
+            close() // on envoi le post, la fenêtre se ferme
             let emptyArray: [String] = []
             let date = Date().timeIntervalSince1970
             var data: [String: Any] = [
                 KEY_TEXT: descriptionTV.text!,
+                KEY_CATEGORY: selectedCategory.rawValue,
                 KEY_DATE: date,
                 KEY_CAT: emptyArray,
                 KEY_FOX: emptyArray,
