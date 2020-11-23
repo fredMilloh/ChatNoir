@@ -33,7 +33,11 @@ class FeedController: MainController {
         MyNotifCenter().receiveNotif("disconnect", self, #selector(disconnect))
         setupPicker()
         FireDatabase().getPosts(.none, _isFavorite: false) { (posts, error) in
-            //juste pour vérifier que l'on reçoit bien les posts
+            if let newPosts = posts {
+                newPosts.forEach { (post) in
+                    print(post.text) //TEST dans console= text des posts triés par date
+                }
+            }
         }
     }
     

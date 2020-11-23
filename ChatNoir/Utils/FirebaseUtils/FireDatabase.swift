@@ -75,12 +75,14 @@ class FireDatabase {
             postCompletion?(nil, error)
         }
         if snapshot != nil {
-            //on s'occupe de nos snaps pour les transformer en Post
+            var posts: [Post] = []
             let documents = snapshot!.documents // ! à la place de ? car on a vérifier que != nil
             // on vient de récupérer un array de documents
             for document in documents {
-                print(document.data())
+                posts.append(Post(document))
+                print(posts)
             }
+            postCompletion?(posts, nil)
         }
     }
 }
