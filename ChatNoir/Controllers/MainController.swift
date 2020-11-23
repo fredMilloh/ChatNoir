@@ -8,7 +8,7 @@
 import UIKit
 
 class MainController: RootController {
-//pour gérer options de tous les controller ( ex: mode nuit)
+//pour gérer options de tous les controller fils ( ex: mode nuit)
     
     var photoType: PhotoType = .post
     var imagePicker: UIImagePickerController?

@@ -11,6 +11,11 @@ import Firebase
 
 class FireDatabase {
     
+//MARK: - Completion
+    var postCompletion: (([Post]?, Error?) -> Void)? //pour pouvoir appeler cette completion dans une autre func
+    
+//MARK: - CollectionReferences
+    
     let base = Firestore.firestore()
     
     var userCollection: CollectionReference {
@@ -19,6 +24,13 @@ class FireDatabase {
     var postsCollection: CollectionReference {
         return base.collection("posts")
     }
+    
+//MARK: - Query
+    //requête de posts, trier(order) par date
+    func postBaseQuery() -> Query {
+        return postsCollection.order(by: KEY_DATE, descending: true)
+    }
+    
 //func pour ajouter un user (efface et met en place)
     func addUser(_ uid: String, data: [String: Any]) {
         userCollection.document(uid).setData(data)
@@ -51,5 +63,24 @@ class FireDatabase {
     
     func addPost(_ data: [String: Any]) {
         postsCollection.document().setData(data)
+    }
+    
+    func getPosts(_ category: PostCategory, _isFavorite: Bool, completion: (([Post]?, Error?) -> Void)?) {
+        self.postCompletion = completion
+        postBaseQuery().addSnapshotListener(handleListener(_:_:))
+    }
+    
+    func handleListener(_ snapshot: QuerySnapshot?, _ error: Error?) {
+        if error != nil {
+            postCompletion?(nil, error)
+        }
+        if snapshot != nil {
+            //on s'occupe de nos snaps pour les transformer en Post
+            let documents = snapshot!.documents // ! à la place de ? car on a vérifier que != nil
+            // on vient de récupérer un array de documents
+            for document in documents {
+                print(document.data())
+            }
+        }
     }
 }

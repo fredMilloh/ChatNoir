@@ -29,7 +29,7 @@ class LogController: RootController {
         setupUI()
     }
 
-// MARKS: - Gestion affichage champs
+// MARK: - Gestion affichage champs
     
     func setupUI() {
         if FireAuth().isAuth() {
@@ -49,7 +49,7 @@ class LogController: RootController {
         view.isHidden = !bool
     }
     
-// MARKS: - Alertes sur champs non remplis
+// MARK: - Alertes sur champs non remplis
     
     @IBAction func validateButton(_ sender: UIButton) {
         if let mail = mailTF.text, mail != "" {
@@ -106,7 +106,7 @@ class LogController: RootController {
         performSegue(withIdentifier: SEGUE_APP, sender: nil)
     }
  
-// MARKS: retour clavier
+// MARK: retour clavier
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)

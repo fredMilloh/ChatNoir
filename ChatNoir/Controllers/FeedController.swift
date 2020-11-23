@@ -32,6 +32,9 @@ class FeedController: MainController {
         super.viewDidLoad()
         MyNotifCenter().receiveNotif("disconnect", self, #selector(disconnect))
         setupPicker()
+        FireDatabase().getPosts(.none, _isFavorite: false) { (posts, error) in
+            //juste pour vérifier que l'on reçoit bien les posts
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -129,8 +132,10 @@ class FeedController: MainController {
         view.addSubview(settingsView!)
         Animations().moveViews(settingsView!, -self.view.frame.height, false)
     }
+    
     @IBAction func segmentedPressed(_ sender: Any) {
     }
+    
     @IBAction func menuPressed(_ sender: UIButton) {
         isMenuOpen ? closeMenu(sender.tag) : openMenu()
     }
