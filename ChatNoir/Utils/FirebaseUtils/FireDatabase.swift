@@ -80,7 +80,6 @@ class FireDatabase {
             // on vient de récupérer un array de documents
             for document in documents {
                 posts.append(Post(document))
-                print(posts)
             }
             postCompletion?(posts, nil)
         }

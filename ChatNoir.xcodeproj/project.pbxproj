@@ -24,6 +24,8 @@
 		B6CC5A302568165F008986D4 /* WritePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC5A2F2568165F008986D4 /* WritePostView.swift */; };
 		B6CC5A3325681699008986D4 /* WritePostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6CC5A3225681699008986D4 /* WritePostView.xib */; };
 		B6CC5A38256C1E05008986D4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC5A37256C1E05008986D4 /* Post.swift */; };
+		B6CC5A3B256D4D69008986D4 /* PostContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC5A3A256D4D69008986D4 /* PostContainer.swift */; };
+		B6CC5A3E256D4EE8008986D4 /* PostContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6CC5A3D256D4EE8008986D4 /* PostContainer.xib */; };
 		B6DCD6A0255AEDA100340143 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD69F255AEDA100340143 /* AppDelegate.swift */; };
 		B6DCD6A2255AEDA100340143 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD6A1255AEDA100340143 /* SceneDelegate.swift */; };
 		B6DCD6A7255AEDA100340143 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6DCD6A5255AEDA100340143 /* Main.storyboard */; };
@@ -65,6 +67,8 @@
 		B6CC5A2F2568165F008986D4 /* WritePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritePostView.swift; sourceTree = "<group>"; };
 		B6CC5A3225681699008986D4 /* WritePostView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WritePostView.xib; sourceTree = "<group>"; };
 		B6CC5A37256C1E05008986D4 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		B6CC5A3A256D4D69008986D4 /* PostContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostContainer.swift; sourceTree = "<group>"; };
+		B6CC5A3D256D4EE8008986D4 /* PostContainer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostContainer.xib; sourceTree = "<group>"; };
 		B6DCD69C255AEDA100340143 /* ChatNoir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatNoir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6DCD69F255AEDA100340143 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6DCD6A1255AEDA100340143 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -213,6 +217,7 @@
 				B6DCD766255C68AE00340143 /* LoadableView.swift */,
 				B6CC59A92562CD48008986D4 /* SettingsView.swift */,
 				B6CC5A2F2568165F008986D4 /* WritePostView.swift */,
+				B6CC5A3A256D4D69008986D4 /* PostContainer.swift */,
 			);
 			path = "Loadable Views";
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 				B6DCD76B255C6D8F00340143 /* AlertView.xib */,
 				B6CC59AC2562CD89008986D4 /* SettingsView.xib */,
 				B6CC5A3225681699008986D4 /* WritePostView.xib */,
+				B6CC5A3D256D4EE8008986D4 /* PostContainer.xib */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -312,6 +318,7 @@
 				B6DCD6AC255AEDA300340143 /* LaunchScreen.storyboard in Resources */,
 				B6DCD6A9255AEDA300340143 /* Assets.xcassets in Resources */,
 				B6CC5A3325681699008986D4 /* WritePostView.xib in Resources */,
+				B6CC5A3E256D4EE8008986D4 /* PostContainer.xib in Resources */,
 				B6DCD76C255C6D8F00340143 /* AlertView.xib in Resources */,
 				B6CC59AD2562CD89008986D4 /* SettingsView.xib in Resources */,
 				B6DCD6A7255AEDA100340143 /* Main.storyboard in Resources */,
@@ -380,6 +387,7 @@
 				B6DCD6A0255AEDA100340143 /* AppDelegate.swift in Sources */,
 				B6DCD6A2255AEDA100340143 /* SceneDelegate.swift in Sources */,
 				B6DCD767255C68AE00340143 /* LoadableView.swift in Sources */,
+				B6CC5A3B256D4D69008986D4 /* PostContainer.swift in Sources */,
 				B6DCD77B255DB4A700340143 /* FireDatabase.swift in Sources */,
 				B6CC59E42566BDFF008986D4 /* FireStorage.swift in Sources */,
 				B6CC59AA2562CD48008986D4 /* SettingsView.swift in Sources */,

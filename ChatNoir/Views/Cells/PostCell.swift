@@ -8,6 +8,6 @@
 import UIKit
 
 class PostCell: UICollectionViewCell {
-    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var containerView: PostContainer!
     
 }
