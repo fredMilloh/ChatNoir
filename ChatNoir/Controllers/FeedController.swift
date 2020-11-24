@@ -27,16 +27,22 @@ class FeedController: MainController {
     
     var settingsView: SettingsView?
     var writePostView: WritePostView?
+    var posts: [Post] = []
     
     override func viewDidLoad() {
+        collectionView.delegate = self
+        collectionView.dataSource = self
         super.viewDidLoad()
         MyNotifCenter().receiveNotif("disconnect", self, #selector(disconnect))
         setupPicker()
         FireDatabase().getPosts(.none, _isFavorite: false) { (posts, error) in
             if let newPosts = posts {
-                newPosts.forEach { (post) in
-                    print(post.text) //TEST dans console= text des posts triés par date
-                }
+                self.posts = newPosts
+                self.collectionView.reloadData()
+                //pour TEST dans console = text des posts triés par date
+                //newPosts.forEach { (post) in
+                //   print(post.text)
+                //}
             }
         }
     }
@@ -146,6 +152,9 @@ class FeedController: MainController {
     
     
 }
+
+//MARK: - UIPickerViewDelegate DataSource
+
 extension FeedController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -165,6 +174,26 @@ extension FeedController: UIPickerViewDelegate, UIPickerViewDataSource {
         //print("Row Chosen => \(row)")
         if writePostView != nil {
             writePostView?.selectedCategory = PostCategory.allCases[row] //pour passer la selection du picker
+        }
+    }
+}
+
+//MARK: - UICollectionViewDelegate, FlowLayout, DataSource
+
+extension FeedController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return posts.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: POST_ID, for: indexPath) as? PostCell {
+            return cell
+        } else {
+            return UICollectionViewCell()
         }
     }
     
