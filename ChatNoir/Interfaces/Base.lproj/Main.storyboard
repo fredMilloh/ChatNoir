@@ -196,15 +196,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="413" height="253"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qd5-eR-sm0" customClass="PostContainer" customModule="ChatNoir" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="8" width="385" height="237"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qd5-eR-sm0" customClass="PostContainer" customModule="ChatNoir" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="413" height="253"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="qd5-eR-sm0" secondAttribute="trailing" id="CVR-AZ-Yfi"/>
+                                                <constraint firstItem="qd5-eR-sm0" firstAttribute="leading" secondItem="pX4-1s-dz7" secondAttribute="leading" id="MuB-mh-k98"/>
+                                                <constraint firstItem="qd5-eR-sm0" firstAttribute="top" secondItem="pX4-1s-dz7" secondAttribute="top" id="TYF-O7-C8M"/>
+                                                <constraint firstAttribute="bottom" secondItem="qd5-eR-sm0" secondAttribute="bottom" id="qAg-4u-z1U"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="customSize" width="413" height="253"/>
+                                        <connections>
+                                            <outlet property="containerView" destination="qd5-eR-sm0" id="RR8-NR-ECE"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

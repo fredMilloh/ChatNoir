@@ -27,6 +27,7 @@ class FireStorage {
     func sendImageToFirebase(_ ref: StorageReference, _ image: UIImage, completion: ImageUploadCompletion?) {
         //on compresse l'image en jpeg, qualité petite car image petite sur appli
         guard let data = image.jpegData(compressionQuality: 0.3) else { return }
+        
         ref.putData(data, metadata: nil) { (meta, error) in
             if error != nil {
                 print(error!.localizedDescription)

@@ -22,7 +22,7 @@ class MainController: RootController {
     //func pour prendre photo ou accès album - appeler dans les controller qui en ont besoin (ex: ProfileC)
     func setupPicker() {
         imagePicker = UIImagePickerController()
-        imagePicker?.allowsEditing = true
+        imagePicker?.allowsEditing = false
         imagePicker?.delegate = self
     }
     

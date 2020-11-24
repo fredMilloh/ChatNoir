@@ -153,7 +153,7 @@ class FeedController: MainController {
     
 }
 
-//MARK: - UIPickerViewDelegate DataSource
+//MARK: - Category UIPickerViewDelegate DataSource
 
 extension FeedController: UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -191,11 +191,23 @@ extension FeedController: UICollectionViewDelegate, UICollectionViewDelegateFlow
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: POST_ID, for: indexPath) as? PostCell {
+            cell.setup(posts[indexPath.item])
             return cell
         } else {
             return UICollectionViewCell()
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let post = posts[indexPath.item]
+        let width = collectionView.frame.width
+        let elementWidth = width - 50
+        var baseHeight: CGFloat = 130
+        baseHeight += SizeUtil().getPostTextSize(post.text, elementWidth).height
+        if post.imageUrl != nil {
+            baseHeight += elementWidth
+        }
+        return CGSize(width: width, height: baseHeight)
+    }
     
 }

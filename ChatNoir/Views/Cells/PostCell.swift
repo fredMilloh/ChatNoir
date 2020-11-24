@@ -8,6 +8,14 @@
 import UIKit
 
 class PostCell: UICollectionViewCell {
+    
     @IBOutlet weak var containerView: PostContainer!
+    
+    var post: Post!
+    
+    func setup(_ post: Post) {
+        self.post = post
+        containerView.setup(self.post)
+    }
     
 }

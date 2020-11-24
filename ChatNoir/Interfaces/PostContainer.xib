@@ -13,6 +13,8 @@
             <connections>
                 <outlet property="catButton" destination="2r3-4p-hg4" id="0Jq-9e-D6J"/>
                 <outlet property="catText" destination="3gj-ft-xnQ" id="f9R-UC-0U2"/>
+                <outlet property="categoryLbl" destination="jNt-lf-ZQX" id="OgH-RG-lrg"/>
+                <outlet property="dateLbl" destination="8AP-x1-MQI" id="fce-da-2Ih"/>
                 <outlet property="foxButton" destination="6xC-dW-WgQ" id="xFJ-Nk-teS"/>
                 <outlet property="foxText" destination="SOr-H2-Nji" id="B5M-UO-XqA"/>
                 <outlet property="holderView" destination="kbr-vb-I7v" id="Oje-Sc-YcP"/>
@@ -64,14 +66,14 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nbu-w5-1YL">
-                            <rect key="frame" x="20" y="26" width="364" height="20.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nbu-w5-1YL">
+                            <rect key="frame" x="20" y="26" width="364" height="18.5"/>
+                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fdq-LA-XqC">
-                            <rect key="frame" x="20" y="51.5" width="364" height="154.5"/>
+                            <rect key="frame" x="20" y="49.5" width="364" height="156.5"/>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8fm-os-x5o">
                             <rect key="frame" x="20" y="216" width="364" height="32"/>
