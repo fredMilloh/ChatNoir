@@ -84,4 +84,17 @@ class FireDatabase {
             postCompletion?(posts, nil)
         }
     }
+    
+    func addOrRemoveLike(_ cat: Bool, _ post: Post) {
+        guard let uid = FireAuth().myId() else { return }
+        let valueOne = cat ? KEY_CAT : KEY_FOX
+        let valueTwo = cat ? KEY_FOX : KEY_CAT
+        //si l'user: clique sur cat, et qu'il a déjà cliquer dessus, OU sur pas cat (donc fox) et qu'il a déjà cliquer fox
+        if (cat && post.cat.contains(uid)) || (!cat && post.fox.contains(uid)) {
+            //on retire son vote (uid) du post
+            post.ref.updateData([valueOne: FieldValue.arrayRemove([uid])])
+        } else { //si cat est déjà cliqué et que l'user clique sur fox, on change le vote
+            post.ref.updateData([valueOne: FieldValue.arrayUnion([uid]), valueTwo: FieldValue.arrayRemove([uid])])
+        }
+    }
 }

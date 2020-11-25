@@ -44,6 +44,8 @@ class PostContainer: LoadableView {
         dateLbl.text = setDate()
         categoryLbl.text = self.post.category
         ImageLoader().load(self.post.imageUrl, postImage)
+        catText.text = String(self.post.cat.count) + " chat noir"
+        foxText.text = String(self.post.fox.count) + " ruse de renard"
     }
     
     func setDate() -> String {
@@ -67,7 +69,7 @@ class PostContainer: LoadableView {
     }
 
     @IBAction func buttonPressed(_ sender: UIButton) {
-        
+        FireDatabase().addOrRemoveLike(sender.tag == 0, self.post)
     }
     
 }

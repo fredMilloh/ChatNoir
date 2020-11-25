@@ -192,7 +192,7 @@
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PostCell" id="hnD-PS-73J" customClass="PostCell" customModule="ChatNoir" customModuleProvider="target">
                                         <rect key="frame" x="0.5" y="0.0" width="413" height="253"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pX4-1s-dz7">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pX4-1s-dz7" customClass="PostContainer" customModule="ChatNoir" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="413" height="253"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
