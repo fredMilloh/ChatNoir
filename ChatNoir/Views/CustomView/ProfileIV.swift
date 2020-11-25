@@ -23,6 +23,8 @@ class ProfileIV: UIImageView {
         layer.borderColor = UIColor.white.cgColor
         layer.borderWidth = 2
         isUserInteractionEnabled = true
+        contentMode = .scaleToFill
+        clipsToBounds = true
     }
 
 }

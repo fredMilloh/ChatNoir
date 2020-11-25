@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class FeedController: MainController {
     
@@ -30,9 +31,11 @@ class FeedController: MainController {
     var posts: [Post] = []
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        picker.delegate = self
+        picker.dataSource = self
         collectionView.delegate = self
         collectionView.dataSource = self
-        super.viewDidLoad()
         MyNotifCenter().receiveNotif("disconnect", self, #selector(disconnect))
         setupPicker()
         FireDatabase().getPosts(.none, _isFavorite: false) { (posts, error) in

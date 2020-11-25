@@ -30,23 +30,23 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="2kL-VQ-MeO" customClass="ProfileIV" customModule="ChatNoir" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                    <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="32" id="uYj-vU-tUp"/>
-                        <constraint firstAttribute="height" constant="32" id="vXu-NG-JG4"/>
+                        <constraint firstAttribute="width" constant="45" id="uYj-vU-tUp"/>
+                        <constraint firstAttribute="height" constant="45" id="vXu-NG-JG4"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLv-cv-3ag">
-                    <rect key="frame" x="40" y="0.0" width="366" height="32"/>
+                    <rect key="frame" x="53" y="0.0" width="353" height="45"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="32" id="LfG-3r-vnb"/>
+                        <constraint firstAttribute="height" constant="45" id="LfG-3r-vnb"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                     <color key="textColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kbr-vb-I7v" customClass="RoundedView" customModule="ChatNoir" customModuleProvider="target">
-                    <rect key="frame" x="5" y="37" width="404" height="253"/>
+                    <rect key="frame" x="5" y="50" width="404" height="240"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNt-lf-ZQX">
                             <rect key="frame" x="20" y="0.0" width="177" height="21"/>
@@ -73,10 +73,10 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fdq-LA-XqC">
-                            <rect key="frame" x="20" y="49.5" width="364" height="156.5"/>
+                            <rect key="frame" x="20" y="49.5" width="364" height="143.5"/>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8fm-os-x5o">
-                            <rect key="frame" x="20" y="216" width="364" height="32"/>
+                            <rect key="frame" x="20" y="203" width="364" height="32"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2r3-4p-hg4">
                                     <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>

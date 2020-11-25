@@ -61,6 +61,17 @@ class FireDatabase {
         }
     }
     
+    func getUser(_ uid: String, completion: UserCompletion?) {
+        userCollection.document(uid).addSnapshotListener { (doc, error) in
+            if error != nil {
+                completion?(nil)
+            }
+            if doc != nil {
+                completion?(User(doc!))
+            }
+        }
+    }
+    
     func addPost(_ data: [String: Any]) {
         postsCollection.document().setData(data)
     }
