@@ -14,8 +14,7 @@ class PostContainer: LoadableView {
     @IBOutlet weak var postText: UILabel!
     @IBOutlet weak var postImage: UIImageView! {
         didSet {
-            contentMode = .scaleToFill
-            clipsToBounds = true
+            postImage.layer.cornerRadius = 20
         }
     }
     @IBOutlet weak var catButton: UIButton!
@@ -38,8 +37,7 @@ class PostContainer: LoadableView {
     func setup(_ post: Post) {
         self.post = post //pour éviter confusion dans la réception des posts
         //dimensions pour l'image si il y en a une
-        let width = CGFloat(350) 
-        //let width = self.postImage.frame.width - 50
+        let width = self.postImage.frame.width
         let height = self.post.imageUrl == nil ? 0 : width
         self.postImage.frame.size = CGSize(width: width, height: height)
         //hauteur pour le text

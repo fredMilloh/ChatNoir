@@ -202,14 +202,16 @@ extension FeedController: UICollectionViewDelegate, UICollectionViewDelegateFlow
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
         let post = posts[indexPath.item]
         let width = collectionView.frame.width
-        let elementWidth = width - 50
+        let elementWidth = width - 20
         var baseHeight: CGFloat = 130
         baseHeight += SizeUtil().getPostTextSize(post.text, elementWidth).height
         if post.imageUrl != nil {
             baseHeight += elementWidth
         }
+        //Storyboard/inspecteur de taile/Estimate Size -> none (sinon image immense quand cell change)
         return CGSize(width: width, height: baseHeight)
     }
     
