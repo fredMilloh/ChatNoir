@@ -5,7 +5,7 @@
 //  Created by fred on 13/11/2020.
 //
 
-import Foundation
+import UIKit
 
 //Segues
 let SEGUE_APP = "ToApp"
@@ -30,6 +30,18 @@ let KEY_FOX = "fox"
 
 //UD
 let UD_NIGHT = "night"
+
+//Colors
+let TURQUOISE = UIColor(red: 26 / 255, green: 188 / 255, blue: 156 / 255, alpha: 1)
+let SUNFLOWER = UIColor(red: 241 / 255, green: 196 / 255, blue: 15 / 255, alpha: 1)
+let EMERALD_GREEN = UIColor(red: 46 / 255, green: 204 / 255, blue: 113 / 255, alpha: 1)
+let CARROT = UIColor(red: 230 / 255, green: 126 / 255, blue: 34 / 255, alpha: 1)
+let RIVER_BLUE = UIColor(red: 52 / 255, green: 152 / 255, blue: 219 / 255, alpha: 1)
+let RED = UIColor(red: 231 / 255, green: 76 / 255, blue:  60 / 255, alpha: 1)
+let PURPLE = UIColor(red: 155 / 255, green: 89 / 255, blue: 182 / 255, alpha: 1)
+let LIGHT_GREY = UIColor(red: 236 / 255, green: 240 / 255, blue: 241 / 255, alpha: 1)
+let DARK_GREY = UIColor(red:  44 / 255, green: 62 / 255, blue: 80 / 255, alpha: 1)
+let GREY = UIColor(red: 149 / 255, green: 165 / 255, blue: 166 / 255, alpha: 1)
 
 //Functions
 func errorEmpty(_ string: String) -> String {

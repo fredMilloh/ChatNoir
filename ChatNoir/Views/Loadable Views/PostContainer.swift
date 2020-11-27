@@ -33,9 +33,12 @@ class PostContainer: LoadableView {
     let cat_empty = UIImage(named: "cat_empty")
     let fox_full = UIImage(named: "fox_full")
     let fox_empty = UIImage(named: "fox_empty")
+    let default_image = UIImage(named: "profile")
     
     func setup(_ post: Post) {
         self.post = post //pour éviter confusion dans la réception des posts
+        self.user = nil //on s'assure que le nouvel user soit vide
+        userImage.image = default_image //on lui affecte l'image par defaut pour qu'il ne prenne pas celle du post précédent
         //dimensions pour l'image si il y en a une
         let width = self.postImage.frame.width
         let height = self.post.imageUrl == nil ? 0 : width
@@ -44,7 +47,6 @@ class PostContainer: LoadableView {
         let textSize = SizeUtil().getPostTextSize(self.post.text, width)
         self.postText.frame.size = textSize
         postText.text = self.post.text
-        holderView.backgroundColor = .systemGray5
         catButton.setImage(getButtonImage(true), for: .normal)
         foxButton.setImage(getButtonImage(false), for: .normal)
         dateLbl.text = setDate()
@@ -58,6 +60,12 @@ class PostContainer: LoadableView {
                 self.setUser()
             }
         }
+        //Transform Category
+        let currentCategory = PostCategory(rawValue: self.post.category) // ?? PostCategory.none
+        let palette = currentCategory?.getColor()
+        holderView.backgroundColor = palette?.background
+        dateLbl.textColor = palette?.dateText
+        postText.textColor = palette?.mainText
     }
     
     func setUser() {
@@ -70,7 +78,7 @@ class PostContainer: LoadableView {
     func setDate() -> String {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
-        formatter.timeStyle = .medium
+        formatter.timeStyle = .short
         let date = Date(timeIntervalSince1970: self.post.date) //on récupére la date
         return formatter.string(from: date)
     }

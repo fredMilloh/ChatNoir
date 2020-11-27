@@ -27,7 +27,7 @@ class MainController: RootController {
     }
     
     @objc func setupNight() {
-        view.backgroundColor = UD().getNight() ? .black : .white
+        view.backgroundColor = UD().getNight() ? DARK_GREY : LIGHT_GREY
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == SEGUE_PROFILE {

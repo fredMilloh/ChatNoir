@@ -28,4 +28,16 @@ enum PostCategory: String, CaseIterable {      //permet de retourner un row en s
     case pets = "Animaux de compagnie"
     case holidays = "Vacances"
     case friends = "Amis"
+    
+    func getColor() -> ColorPalette {
+        switch self {
+        case .none: return ColorPalette(background: TURQUOISE, mainText: DARK_GREY, dateText: RED)
+        case .family: return ColorPalette(background: PURPLE, mainText: LIGHT_GREY, dateText: RED)
+        case .friends: return ColorPalette(background: SUNFLOWER, mainText: DARK_GREY, dateText: RED)
+        case .holidays: return ColorPalette(background: TURQUOISE, mainText: LIGHT_GREY, dateText: RED)
+        case .job: return ColorPalette(background: RIVER_BLUE, mainText: LIGHT_GREY, dateText: RED)
+        case .naughty: return ColorPalette(background: RED, mainText: LIGHT_GREY, dateText: RIVER_BLUE)
+        case .pets: return ColorPalette(background: EMERALD_GREEN, mainText: LIGHT_GREY, dateText: RED)
+        }
+    }
 }

@@ -152,8 +152,6 @@ class FeedController: MainController {
     @IBAction func menuPressed(_ sender: UIButton) {
         isMenuOpen ? closeMenu(sender.tag) : openMenu()
     }
-    
-    
 }
 
 //MARK: - Category UIPickerViewDelegate DataSource
