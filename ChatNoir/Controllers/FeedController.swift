@@ -203,6 +203,7 @@ extension FeedController: UICollectionViewDelegate, UICollectionViewDelegateFlow
         
         let post = posts[indexPath.item]
         let width = collectionView.frame.width
+        /* on passe la suite dans la func getPostSize pour la réutiliser dans ProfileCongtroller
         let elementWidth = width - 20
         var baseHeight: CGFloat = 130
         baseHeight += SizeUtil().getPostTextSize(post.text, elementWidth).height
@@ -211,6 +212,8 @@ extension FeedController: UICollectionViewDelegate, UICollectionViewDelegateFlow
         }
         //Storyboard/inspecteur de taile/Estimate Size -> none (sinon image immense quand cell change)
         return CGSize(width: width, height: baseHeight)
+        */
+        return SizeUtil().getPostSize(post, width)
     }
-    
+
 }

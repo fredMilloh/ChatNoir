@@ -13,6 +13,7 @@ class ProfileController: MainController {
     
     var headerView: HeaderView?
     var user: User?
+    var posts: [Post] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,17 @@ class ProfileController: MainController {
             if let new = user {
                 print("Nouveau => " + new.name)
                 self.user = new
+                self.observePost()
+                self.collectionView.reloadData()
+            }
+        }
+    }
+    
+    func observePost() {
+        guard let u = user else { return }
+        FireDatabase().getPostsFrom(u.uid) { (p, e) in
+            if let newPosts = p {
+                self.posts = newPosts
                 self.collectionView.reloadData()
             }
         }
@@ -43,11 +55,12 @@ extension ProfileController: UICollectionViewDelegate, UICollectionViewDataSourc
     
     // cell
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return posts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: POST_ID, for: indexPath) as? PostCell {
+            cell.setup(posts[indexPath.item])
             return cell
         } else {
             return UICollectionViewCell()
@@ -55,7 +68,7 @@ extension ProfileController: UICollectionViewDelegate, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 250)
+        return SizeUtil().getPostSize(posts[indexPath.item], collectionView.frame.width)
     }
     
     //Header

@@ -81,6 +81,14 @@ class FireDatabase {
         postBaseQuery().addSnapshotListener(handleListener(_:_:))
     }
     
+    //pour récupérer les posts uniques d'un user
+    func getPostsFrom(_ userId: String, completion: (([Post]?, Error?) -> Void)?) {
+        self.postCompletion = completion
+        //attention avec whereField -> listen failed dans la console -> créer index dans firebase
+        postBaseQuery().whereField(KEY_UID, isEqualTo: userId).addSnapshotListener(handleListener(_:_:))
+        
+    }
+    
     func handleListener(_ snapshot: QuerySnapshot?, _ error: Error?) {
         if error != nil {
             postCompletion?(nil, error)
