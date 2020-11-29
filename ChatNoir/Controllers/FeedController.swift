@@ -25,6 +25,7 @@ class FeedController: MainController {
     
     var isMenuOpen = false
     var baseFrame: CGRect?
+    var listener: ListenerRegistration? //pour n'avoir qu'une seule query
     
     var settingsView: SettingsView?
     var writePostView: WritePostView?
@@ -38,21 +39,25 @@ class FeedController: MainController {
         collectionView.dataSource = self
         MyNotifCenter().receiveNotif("disconnect", self, #selector(disconnect))
         setupPicker()
-        FireDatabase().getPosts(.none, _isFavorite: false) { (posts, error) in
-            if let newPosts = posts {
-                self.posts = newPosts
-                self.collectionView.reloadData()
-                //pour TEST dans console = text des posts triés par date
-                //newPosts.forEach { (post) in
-                //   print(post.text)
-                //}
-            }
-        }
+        registerListener()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         baseFrame = menuView.frame
+    }
+    
+    func registerListener() {  //on vérifie si il y a listener
+        if listener != nil {
+            listener?.remove()
+            listener = nil
+        }
+        listener = FireDatabase().getPosts(.none, segmented.selectedSegmentIndex == 1) { (posts, error) in
+            if let newPosts = posts {
+                self.posts = newPosts
+                self.collectionView.reloadData()
+            }
+        }
     }
     
     func openMenu() {
@@ -147,6 +152,7 @@ class FeedController: MainController {
     }
     
     @IBAction func segmentedPressed(_ sender: Any) {
+        registerListener()
     }
     
     @IBAction func menuPressed(_ sender: UIButton) {
@@ -202,7 +208,7 @@ extension FeedController: UICollectionViewDelegate, UICollectionViewDelegateFlow
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let post = posts[indexPath.item]
-        let width = collectionView.frame.width
+        let width = collectionView.frame.width - 10
         /* on passe la suite dans la func getPostSize pour la réutiliser dans ProfileCongtroller
         let elementWidth = width - 20
         var baseHeight: CGFloat = 130

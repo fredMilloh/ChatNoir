@@ -76,9 +76,17 @@ class FireDatabase {
         postsCollection.document().setData(data)
     }
     
-    func getPosts(_ category: PostCategory, _isFavorite: Bool, completion: (([Post]?, Error?) -> Void)?) {
+    func getPosts(_ category: PostCategory, _ isFavorite: Bool, completion: (([Post]?, Error?) -> Void)?) -> ListenerRegistration {
         self.postCompletion = completion
-        postBaseQuery().addSnapshotListener(handleListener(_:_:))
+        if isFavorite { //on return les posts où on(=user connecté) aura mis chat
+            if let uid = FireAuth().myId() {
+                return postBaseQuery().whereField(KEY_CAT, arrayContains: uid).addSnapshotListener(handleListener(_:_:))
+            } else {
+                return postBaseQuery().addSnapshotListener(handleListener(_:_:))
+            }
+        } else {
+            return postBaseQuery().addSnapshotListener(handleListener(_:_:))
+        }
     }
     
     //pour récupérer les posts uniques d'un user

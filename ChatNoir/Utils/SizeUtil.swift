@@ -19,7 +19,7 @@ class SizeUtil {
     }
     
     func getPostSize(_ post: Post, _ width: CGFloat) -> CGSize {
-        let elementWidth = width - 40
+        let elementWidth = width
         var baseHeight: CGFloat = 130
         baseHeight += SizeUtil().getPostTextSize(post.text, elementWidth).height
         if post.imageUrl != nil {

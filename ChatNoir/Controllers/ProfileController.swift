@@ -68,7 +68,7 @@ extension ProfileController: UICollectionViewDelegate, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return SizeUtil().getPostSize(posts[indexPath.item], collectionView.frame.width)
+        return SizeUtil().getPostSize(posts[indexPath.item], collectionView.frame.width - 10)
     }
     
     //Header
