@@ -52,7 +52,7 @@ class AlertView: LoadableView {
     
     func setupName(_ user: User?) {
         guard user != nil else { return }
-        type = .changeName
+        self.type = .changeName
         messageLbl.isHidden = true
         surnameTF.isHidden = false
         nameTF.isHidden = false

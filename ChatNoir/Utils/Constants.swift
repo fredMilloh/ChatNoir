@@ -10,6 +10,7 @@ import UIKit
 //Segues
 let SEGUE_APP = "ToApp"
 let SEGUE_PROFILE = "ToProfile"
+let SEGUE_DETAIL = "ToDetail"
 
 //Identifiers
 let HEADER_ID = "HeaderView"

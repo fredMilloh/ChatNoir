@@ -28,6 +28,7 @@
 		B6CC5A3E256D4EE8008986D4 /* PostContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6CC5A3D256D4EE8008986D4 /* PostContainer.xib */; };
 		B6CC5A41256D7213008986D4 /* SizeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC5A40256D7213008986D4 /* SizeUtil.swift */; };
 		B6CC5A44257169A8008986D4 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC5A43257169A8008986D4 /* ColorPalette.swift */; };
+		B6CC5A472573F1C7008986D4 /* DetailPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC5A462573F1C7008986D4 /* DetailPostController.swift */; };
 		B6DCD6A0255AEDA100340143 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD69F255AEDA100340143 /* AppDelegate.swift */; };
 		B6DCD6A2255AEDA100340143 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD6A1255AEDA100340143 /* SceneDelegate.swift */; };
 		B6DCD6A7255AEDA100340143 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6DCD6A5255AEDA100340143 /* Main.storyboard */; };
@@ -73,6 +74,7 @@
 		B6CC5A3D256D4EE8008986D4 /* PostContainer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostContainer.xib; sourceTree = "<group>"; };
 		B6CC5A40256D7213008986D4 /* SizeUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeUtil.swift; sourceTree = "<group>"; };
 		B6CC5A43257169A8008986D4 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		B6CC5A462573F1C7008986D4 /* DetailPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostController.swift; sourceTree = "<group>"; };
 		B6DCD69C255AEDA100340143 /* ChatNoir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatNoir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6DCD69F255AEDA100340143 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6DCD6A1255AEDA100340143 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				B6CC59B22562E4E8008986D4 /* MainController.swift */,
 				B6DCD77D255EDADC00340143 /* FeedController.swift */,
 				B6CC59B5256427B1008986D4 /* ProfileController.swift */,
+				B6CC5A462573F1C7008986D4 /* DetailPostController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				B6CC59E42566BDFF008986D4 /* FireStorage.swift in Sources */,
 				B6CC59AA2562CD48008986D4 /* SettingsView.swift in Sources */,
 				B6DCD77E255EDADC00340143 /* FeedController.swift in Sources */,
+				B6CC5A472573F1C7008986D4 /* DetailPostController.swift in Sources */,
 				B6CC5A302568165F008986D4 /* WritePostView.swift in Sources */,
 				B6CC59BE25643305008986D4 /* PostCell.swift in Sources */,
 				B6DCD764255C663400340143 /* Enums.swift in Sources */,

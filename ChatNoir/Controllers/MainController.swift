@@ -17,6 +17,29 @@ class MainController: RootController {
         super.viewDidLoad()
         setupNight()
         MyNotifCenter().receiveNotif("night", self, #selector(setupNight))
+        MyNotifCenter().receiveNotif(SEGUE_DETAIL, self, #selector(toDetail))
+    }
+    
+    @objc func setupNight() {
+        view.backgroundColor = UD().getNight() ? DARK_GREY : LIGHT_GREY
+    }
+    
+    @objc func toDetail(notification: Notification) {
+        //print("print => \(notification.userInfo)")
+        if let notif = notification.userInfo {
+            if let user = notif["user"] as? User {
+                print("je suis : " + user.surname)
+            }
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == SEGUE_PROFILE {
+            if let next = segue.destination as? ProfileController {
+                
+            }
+        }
     }
 // MARK: - SetupPicker
     //func pour prendre photo ou accès album - appeler dans les controller qui en ont besoin (ex: ProfileC)
@@ -26,16 +49,6 @@ class MainController: RootController {
         imagePicker?.delegate = self
     }
     
-    @objc func setupNight() {
-        view.backgroundColor = UD().getNight() ? DARK_GREY : LIGHT_GREY
-    }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == SEGUE_PROFILE {
-            if let next = segue.destination as? ProfileController {
-                
-            }
-        }
-    }
     
 }
 

@@ -21,6 +21,7 @@ class RoundedView: UIView {
     
     func setup() {
         layer.cornerRadius = 25
+        isUserInteractionEnabled = true
     }
     
 }

@@ -71,8 +71,8 @@ class PostContainer: LoadableView {
     func setUser() {
         guard user != nil else { return }
         //userName.isUserInteractionEnabled = true
-        ImageLoader().load(user.imageUrl, userImage)
-        userName.text = user.surname + " " + user.name
+        ImageLoader().load(user!.imageUrl, userImage)
+        userName.text = user!.surname + " " + user!.name
     }
     
     func setDate() -> String {
@@ -92,6 +92,20 @@ class PostContainer: LoadableView {
             }
         } else {
             return cat ? cat_empty : fox_empty
+        }
+    }
+    
+    //func pour que juste la holderView du post renvoi vers le detail
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            if let view = touch.view {
+                if view == holderView {
+                    guard user != nil else { return }
+                    MyNotifCenter().post(SEGUE_DETAIL, ["user": user!])
+                } else {
+                    print("autre vue")
+                }
+            }
         }
     }
 
