@@ -540,8 +540,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IZO-3f-E3x" customClass="PostContainer" customModule="ChatNoir" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="414" height="778"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xou-zd-alt">
-                                <rect key="frame" x="362" y="0.0" width="42" height="42"/>
+                                <rect key="frame" x="362" y="35" width="42" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="COQ-cD-7zJ"/>
                                     <constraint firstAttribute="width" constant="42" id="xFc-D7-32p"/>
@@ -551,16 +555,12 @@
                                     <action selector="cancelPressed:" destination="UA8-Ie-LlB" eventType="touchUpInside" id="74E-xP-38p"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IZO-3f-E3x" customClass="PostContainer" customModule="ChatNoir" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="414" height="778"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kCb-bi-uaM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="xou-zd-alt" secondAttribute="trailing" constant="10" id="5HC-vl-RvT"/>
-                            <constraint firstItem="xou-zd-alt" firstAttribute="top" secondItem="R8S-ij-rMU" secondAttribute="top" id="Bgg-S0-VL3"/>
+                            <constraint firstItem="xou-zd-alt" firstAttribute="top" secondItem="R8S-ij-rMU" secondAttribute="top" constant="35" id="Bgg-S0-VL3"/>
                             <constraint firstItem="IZO-3f-E3x" firstAttribute="top" secondItem="kCb-bi-uaM" secondAttribute="top" constant="20" id="a4u-Uj-9ZA"/>
                             <constraint firstItem="kCb-bi-uaM" firstAttribute="bottom" secondItem="IZO-3f-E3x" secondAttribute="bottom" constant="20" id="gVD-kQ-Za3"/>
                             <constraint firstItem="IZO-3f-E3x" firstAttribute="leading" secondItem="kCb-bi-uaM" secondAttribute="leading" id="iGP-bi-QYX"/>

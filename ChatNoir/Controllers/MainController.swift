@@ -27,8 +27,16 @@ class MainController: RootController {
     @objc func toDetail(notification: Notification) {
         //print("print => \(notification.userInfo)")
         if let notif = notification.userInfo {
-            if let user = notif["user"] as? User {
-                print("je suis : " + user.surname)
+            if let post = notif["post"] as? Post {
+                if let last = navigationController?.viewControllers.last { //on recupére le dernier controller afficher
+                    //on vérifie qu'on n'est pas déjà sur DetailPC, si on appui sur holder du détailPC, on ne veut pas répéter
+                    if !last.isKind(of: DetailPostController.self) {
+                        last.performSegue(withIdentifier: SEGUE_DETAIL, sender: post)
+                        print(post.text)
+                }
+                
+                }
+                
             }
         }
         
@@ -36,8 +44,13 @@ class MainController: RootController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == SEGUE_PROFILE {
-            if let next = segue.destination as? ProfileController {
+            if segue.destination is ProfileController {
                 
+            }
+        }
+        if segue.identifier == SEGUE_DETAIL {
+            if let next = segue.destination as? DetailPostController {
+                next.post = sender as? Post
             }
         }
     }

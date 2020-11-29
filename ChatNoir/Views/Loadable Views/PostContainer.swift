@@ -100,8 +100,7 @@ class PostContainer: LoadableView {
         if let touch = touches.first {
             if let view = touch.view {
                 if view == holderView {
-                    guard user != nil else { return }
-                    MyNotifCenter().post(SEGUE_DETAIL, ["user": user!])
+                    MyNotifCenter().post(SEGUE_DETAIL, ["post": post as Any])
                 } else {
                     print("autre vue")
                 }
