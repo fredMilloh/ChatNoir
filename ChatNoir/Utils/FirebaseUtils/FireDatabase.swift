@@ -80,12 +80,21 @@ class FireDatabase {
         self.postCompletion = completion
         if isFavorite { //on return les posts où on(=user connecté) aura mis chat
             if let uid = FireAuth().myId() {
-                return postBaseQuery().whereField(KEY_CAT, arrayContains: uid).addSnapshotListener(handleListener(_:_:))
+                if category == .none {
+                    //attention nouveau whereField donc nouvel index dans Firebase
+                    return postBaseQuery().whereField(KEY_CAT, arrayContains: uid).addSnapshotListener(handleListener(_:_:))
+                } else {
+                    return postBaseQuery().whereField(KEY_CAT, arrayContains: uid).whereField(KEY_CATEGORY, isEqualTo: category.rawValue).addSnapshotListener(handleListener(_:_:))
+                }
             } else {
                 return postBaseQuery().addSnapshotListener(handleListener(_:_:))
             }
         } else {
-            return postBaseQuery().addSnapshotListener(handleListener(_:_:))
+            if category == .none {
+                return postBaseQuery().addSnapshotListener(handleListener(_:_:))
+            } else {
+                return postBaseQuery().whereField(KEY_CATEGORY, isEqualTo: category.rawValue).addSnapshotListener(handleListener(_:_:))
+            }
         }
     }
     

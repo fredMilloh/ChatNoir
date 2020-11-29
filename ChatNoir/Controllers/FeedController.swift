@@ -30,6 +30,7 @@ class FeedController: MainController {
     var settingsView: SettingsView?
     var writePostView: WritePostView?
     var posts: [Post] = []
+    var selectedCategory: PostCategory = .none
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +53,7 @@ class FeedController: MainController {
             listener?.remove()
             listener = nil
         }
-        listener = FireDatabase().getPosts(.none, segmented.selectedSegmentIndex == 1) { (posts, error) in
+        listener = FireDatabase().getPosts(selectedCategory, segmented.selectedSegmentIndex == 1) { (posts, error) in
             if let newPosts = posts {
                 self.posts = newPosts
                 self.collectionView.reloadData()
@@ -181,6 +182,9 @@ extension FeedController: UIPickerViewDelegate, UIPickerViewDataSource {
         //print("Row Chosen => \(row)")
         if writePostView != nil {
             writePostView?.selectedCategory = PostCategory.allCases[row] //pour passer la selection du picker
+        } else {
+            selectedCategory = PostCategory.allCases[row]
+            registerListener()
         }
     }
 }
