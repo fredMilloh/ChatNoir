@@ -31,6 +31,7 @@
 		B6CC5A472573F1C7008986D4 /* DetailPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC5A462573F1C7008986D4 /* DetailPostController.swift */; };
 		B6CC5D5F257BE9DF008986D4 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC5D5E257BE9DF008986D4 /* NotificationController.swift */; };
 		B6CC5D62257BEC06008986D4 /* InsideNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC5D61257BEC06008986D4 /* InsideNotification.swift */; };
+		B6CC5D65257C0082008986D4 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CC5D64257C0082008986D4 /* NotificationCell.swift */; };
 		B6DCD6A0255AEDA100340143 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD69F255AEDA100340143 /* AppDelegate.swift */; };
 		B6DCD6A2255AEDA100340143 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCD6A1255AEDA100340143 /* SceneDelegate.swift */; };
 		B6DCD6A7255AEDA100340143 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6DCD6A5255AEDA100340143 /* Main.storyboard */; };
@@ -79,6 +80,7 @@
 		B6CC5A462573F1C7008986D4 /* DetailPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostController.swift; sourceTree = "<group>"; };
 		B6CC5D5E257BE9DF008986D4 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationController.swift; path = ../../../../Documents/NotificationController.swift; sourceTree = "<group>"; };
 		B6CC5D61257BEC06008986D4 /* InsideNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InsideNotification.swift; path = ../../../../Documents/InsideNotification.swift; sourceTree = "<group>"; };
+		B6CC5D64257C0082008986D4 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationCell.swift; path = ../../../../../Documents/NotificationCell.swift; sourceTree = "<group>"; };
 		B6DCD69C255AEDA100340143 /* ChatNoir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatNoir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6DCD69F255AEDA100340143 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6DCD6A1255AEDA100340143 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				B6CC59B925642E1B008986D4 /* HeaderView.swift */,
 				B6CC59BD25643305008986D4 /* PostCell.swift */,
 				B6CC59C0256447C4008986D4 /* HeaderLayout.swift */,
+				B6CC5D64257C0082008986D4 /* NotificationCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				B6DCD6A0255AEDA100340143 /* AppDelegate.swift in Sources */,
 				B6DCD6A2255AEDA100340143 /* SceneDelegate.swift in Sources */,
 				B6DCD767255C68AE00340143 /* LoadableView.swift in Sources */,
+				B6CC5D65257C0082008986D4 /* NotificationCell.swift in Sources */,
 				B6CC5A3B256D4D69008986D4 /* PostContainer.swift in Sources */,
 				B6CC5A44257169A8008986D4 /* ColorPalette.swift in Sources */,
 				B6DCD77B255DB4A700340143 /* FireDatabase.swift in Sources */,
