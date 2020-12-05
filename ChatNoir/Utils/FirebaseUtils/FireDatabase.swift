@@ -140,6 +140,8 @@ class FireDatabase {
             sendNotifToFirebase(text, post.userID, post.uid)
         }
     }
+
+//MARK: - Méthode pour envoi notification sur Firebase
     
     //qd un user appui sur un post, on envoi une notif à l'auteur du post
     func sendNotifToFirebase(_ text: String, _ receiver: String, _ ref: String) {
@@ -155,6 +157,29 @@ class FireDatabase {
                     ]
                 self.notifCollection(receiver).document().setData(dict)
             }
+        }
+    }
+    
+//MARK: - Méthode pour récupérer une notification
+    
+    func getNotification(completion: NotifCompletion?) {
+        if let uid =  FireAuth().myId() {
+            notifCollection(uid).addSnapshotListener { (query, error) in
+                if error != nil {
+                    print(error!.localizedDescription)
+                    completion?(nil)
+                }
+                if query != nil {
+                    let documents = query?.documents
+                    var notifs = [InsideNotification]()
+                    documents?.forEach({ (doc) in
+                        notifs.append(InsideNotification(document: doc))
+                    })
+                    completion?(notifs)
+                }
+            }
+        } else {
+            completion?(nil)
         }
     }
 }

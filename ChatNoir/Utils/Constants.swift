@@ -11,6 +11,7 @@ import UIKit
 let SEGUE_APP = "ToApp"
 let SEGUE_PROFILE = "ToProfile"
 let SEGUE_DETAIL = "ToDetail"
+let SEGUE_NOTIF = "ToNotif"
 
 //Identifiers
 let HEADER_ID = "HeaderView"
@@ -55,3 +56,4 @@ func errorEmpty(_ string: String) -> String {
 
 typealias UserCompletion = (_ user: User?) -> Void
 typealias ImageUploadCompletion = (_ urlString: String?, _ error: Error?) -> Void
+typealias NotifCompletion = (_ notifs: [InsideNotification]?) -> Void

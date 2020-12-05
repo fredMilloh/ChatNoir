@@ -110,7 +110,7 @@ class FeedController: MainController {
                 self.removeExisting()
                 switch tag {
                 case 1: self.showWrite()
-                case 2: print("Notif")
+                case 2: self.performSegue(withIdentifier: SEGUE_NOTIF, sender: nil)
                 case 3: self.performSegue(withIdentifier: SEGUE_PROFILE, sender: nil)
                 case 4: self.showSettings()
                 default: break

@@ -542,7 +542,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Qoc-dk-xUu">
-                                <rect key="frame" x="10" y="0.0" width="394" height="60"/>
+                                <rect key="frame" x="10" y="44" width="394" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="1UW-7s-tSw"/>
                                 </constraints>
@@ -551,10 +551,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZVI-qp-6HD">
-                                <rect key="frame" x="0.0" y="52" width="414" height="810"/>
+                                <rect key="frame" x="0.0" y="112" width="414" height="750"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="125" id="p0N-d1-DzA" customClass="NotificationCell" customModule="ChatNoir" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NotifCell" rowHeight="125" id="p0N-d1-DzA" customClass="NotificationCell" customModule="ChatNoir" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p0N-d1-DzA" id="YNe-wt-IlF">
@@ -612,8 +612,8 @@
                             <constraint firstAttribute="trailing" secondItem="Qoc-dk-xUu" secondAttribute="trailing" constant="10" id="Fc2-mf-73w"/>
                             <constraint firstItem="ZVI-qp-6HD" firstAttribute="leading" secondItem="bZA-5W-bHM" secondAttribute="leading" id="Ldz-HT-eND"/>
                             <constraint firstItem="ZVI-qp-6HD" firstAttribute="bottom" secondItem="bZA-5W-bHM" secondAttribute="bottom" id="LyZ-u4-c2c"/>
-                            <constraint firstItem="Qoc-dk-xUu" firstAttribute="top" secondItem="3Rj-nn-B97" secondAttribute="top" id="ca4-gm-uAU"/>
-                            <constraint firstItem="ZVI-qp-6HD" firstAttribute="top" secondItem="bZA-5W-bHM" secondAttribute="top" constant="8" id="lZk-hS-nLL"/>
+                            <constraint firstItem="Qoc-dk-xUu" firstAttribute="top" secondItem="bZA-5W-bHM" secondAttribute="top" id="Lyo-lG-cU6"/>
+                            <constraint firstItem="ZVI-qp-6HD" firstAttribute="top" secondItem="Qoc-dk-xUu" secondAttribute="bottom" constant="8" id="lZk-hS-nLL"/>
                             <constraint firstItem="ZVI-qp-6HD" firstAttribute="trailing" secondItem="bZA-5W-bHM" secondAttribute="trailing" id="qbD-iB-SVa"/>
                         </constraints>
                     </view>
