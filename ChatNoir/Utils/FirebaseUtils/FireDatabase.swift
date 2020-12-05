@@ -25,6 +25,10 @@ class FireDatabase {
         return base.collection("posts")
     }
     
+    func notifCollection( _ uid: String) -> CollectionReference {
+        return userCollection.document(uid).collection("notifications")
+    }
+    
 //MARK: - Query
     //requête de posts, trier(order) par date
     func postBaseQuery() -> Query {
@@ -132,5 +136,19 @@ class FireDatabase {
         } else { //si cat est déjà cliqué et que l'user clique sur fox, on change le vote
             post.ref.updateData([valueOne: FieldValue.arrayUnion([uid]), valueTwo: FieldValue.arrayRemove([uid])])
         }
+    }
+    
+    //qd un user appui sur un post, on envoi une notif à l'auteur du post
+    func sendNotifToFirebase(_ text: String, _ receiver: String, _ ref: String) {
+        guard let uid = FireAuth().myId() else { return }
+        let date = Date().timeIntervalSince1970
+        let dict: [String: Any] = [
+            KEY_TEXT: text,
+            KEY_UID: uid,
+            KEY_REF: ref,
+            KEY_SEEN: false,
+            KEY_DATE: date
+            ]
+        notifCollection(receiver).document().setData(dict)
     }
 }
