@@ -380,6 +380,7 @@
                         <outletCollection property="listButton" destination="cbf-V5-R0X" collectionClass="NSMutableArray" id="Fiq-sW-9xT"/>
                         <segue destination="dbm-l8-fBO" kind="show" identifier="ToProfile" id="jwC-sv-bLY"/>
                         <segue destination="UA8-Ie-LlB" kind="show" identifier="ToDetail" id="3v8-hN-PxR"/>
+                        <segue destination="AF8-zi-gRN" kind="show" identifier="ToNotif" id="e5g-7D-cal"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AoQ-bu-vTg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -532,6 +533,49 @@
             </objects>
             <point key="canvasLocation" x="2298.5507246376815" y="38.839285714285715"/>
         </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZQx-CI-0f7">
+            <objects>
+                <viewController id="AF8-zi-gRN" customClass="NotificationController" customModule="ChatNoir" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Rj-nn-B97">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Qoc-dk-xUu">
+                                <rect key="frame" x="10" y="0.0" width="394" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="1UW-7s-tSw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                <color key="textColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZVI-qp-6HD">
+                                <rect key="frame" x="0.0" y="52" width="414" height="810"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bZA-5W-bHM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qoc-dk-xUu" firstAttribute="leading" secondItem="3Rj-nn-B97" secondAttribute="leading" constant="10" id="E2S-Qi-O3F"/>
+                            <constraint firstAttribute="trailing" secondItem="Qoc-dk-xUu" secondAttribute="trailing" constant="10" id="Fc2-mf-73w"/>
+                            <constraint firstItem="ZVI-qp-6HD" firstAttribute="leading" secondItem="bZA-5W-bHM" secondAttribute="leading" id="Ldz-HT-eND"/>
+                            <constraint firstItem="ZVI-qp-6HD" firstAttribute="bottom" secondItem="bZA-5W-bHM" secondAttribute="bottom" id="LyZ-u4-c2c"/>
+                            <constraint firstItem="Qoc-dk-xUu" firstAttribute="top" secondItem="3Rj-nn-B97" secondAttribute="top" id="ca4-gm-uAU"/>
+                            <constraint firstItem="ZVI-qp-6HD" firstAttribute="top" secondItem="bZA-5W-bHM" secondAttribute="top" constant="8" id="lZk-hS-nLL"/>
+                            <constraint firstItem="ZVI-qp-6HD" firstAttribute="trailing" secondItem="bZA-5W-bHM" secondAttribute="trailing" id="qbD-iB-SVa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3jN-TQ-h8s"/>
+                    <connections>
+                        <outlet property="tableView" destination="ZVI-qp-6HD" id="mio-rj-YRb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vDD-Lg-Vnj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2298.5507246376815" y="-668.30357142857144"/>
+        </scene>
         <!--Detail Post Controller-->
         <scene sceneID="pTZ-Tp-6dm">
             <objects>
@@ -598,7 +642,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="3v8-hN-PxR"/>
-        <segue reference="Dam-AT-DrU"/>
+        <segue reference="jwC-sv-bLY"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="add" width="60" height="60"/>
