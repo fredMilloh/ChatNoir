@@ -70,7 +70,7 @@ class PostContainer: LoadableView {
     
     func setUser() {
         guard user != nil else { return }
-        //userName.isUserInteractionEnabled = true
+        userName.isUserInteractionEnabled = true
         ImageLoader().load(user!.imageUrl, userImage)
         userName.text = user!.surname + " " + user!.name
     }
@@ -95,12 +95,14 @@ class PostContainer: LoadableView {
         }
     }
     
-    //func pour que juste la holderView du post renvoi vers le detail
+    //func pour que la holderView du post renvoi vers le detail et le nom et imageProfil renvoi vers profil
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             if let view = touch.view {
                 if view == holderView {
                     MyNotifCenter().post(SEGUE_DETAIL, ["post": post as Any])
+                } else if view == userName || view == userImage {
+                    MyNotifCenter().post(SEGUE_PROFILE, ["user": user as Any])
                 } else {
                     print("autre vue")
                 }

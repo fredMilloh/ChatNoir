@@ -25,12 +25,22 @@ class ProfileController: MainController {
     }
     
     func getUser() {
-        FireDatabase().getMe { (user) in
-            if let new = user {
-                print("Nouveau => " + new.name)
-                self.user = new
-                self.observePost()
-                self.collectionView.reloadData()
+        if user != nil {
+            FireDatabase().getUser(user!.uid) { (u) in
+                if let new = u {
+                    self.user = new
+                    self.observePost()
+                    self.collectionView.reloadData()
+                }
+            }
+        } else {
+            FireDatabase().getMe { (user) in
+                if let new = user {
+                    print("Nouveau => " + new.name)
+                    self.user = new
+                    self.observePost()
+                    self.collectionView.reloadData()
+                }
             }
         }
     }

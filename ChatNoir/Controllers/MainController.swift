@@ -18,6 +18,7 @@ class MainController: RootController {
         setupNight()
         MyNotifCenter().receiveNotif("night", self, #selector(setupNight))
         MyNotifCenter().receiveNotif(SEGUE_DETAIL, self, #selector(toDetail))
+        MyNotifCenter().receiveNotif(SEGUE_PROFILE, self, #selector(toDetail))
     }
     
     @objc func setupNight() {
@@ -27,14 +28,17 @@ class MainController: RootController {
     @objc func toDetail(notification: Notification) {
         //print("print => \(notification.userInfo)")
         if let notif = notification.userInfo {
-            if let post = notif["post"] as? Post {
-                if let last = navigationController?.viewControllers.last { //on recupére le dernier controller afficher
+            if let last = navigationController?.viewControllers.last { //on recupére le dernier controller afficher
+                if let post = notif["post"] as? Post {
                     //on vérifie qu'on n'est pas déjà sur DetailPC, si on appui sur holder du détailPC, on ne veut pas répéter
                     if !last.isKind(of: DetailPostController.self) {
                         last.performSegue(withIdentifier: SEGUE_DETAIL, sender: post)
                         print(post.text)
-                }
-                
+                    }
+                } else if let user = notif["user"] as? User {
+                    if !last.isKind(of: ProfileController.self) {
+                        last.performSegue(withIdentifier: SEGUE_PROFILE, sender: user)
+                    }
                 }
                 
             }
@@ -44,8 +48,8 @@ class MainController: RootController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == SEGUE_PROFILE {
-            if segue.destination is ProfileController {
-                
+            if let next = segue.destination as? ProfileController {
+                next.user = sender as? User
             }
         }
         if segue.identifier == SEGUE_DETAIL {

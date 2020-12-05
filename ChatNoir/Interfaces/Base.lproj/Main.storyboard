@@ -571,6 +571,7 @@
                     <connections>
                         <outlet property="cancelButton" destination="xou-zd-alt" id="fUU-6k-3E2"/>
                         <outlet property="postContainer" destination="IZO-3f-E3x" id="0fE-Zi-pEX"/>
+                        <segue destination="dbm-l8-fBO" kind="show" identifier="ToProfile" id="Dam-AT-DrU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I4h-7Q-8ls" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -597,6 +598,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="3v8-hN-PxR"/>
+        <segue reference="Dam-AT-DrU"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="add" width="60" height="60"/>
