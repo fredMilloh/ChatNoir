@@ -129,26 +129,32 @@ class FireDatabase {
         guard let uid = FireAuth().myId() else { return }
         let valueOne = cat ? KEY_CAT : KEY_FOX
         let valueTwo = cat ? KEY_FOX : KEY_CAT
+        var text = " pense que vous étes " //text de la notification inside
+        text += cat ? "un chat noir" : "un renard"
         //si l'user: clique sur cat, et qu'il a déjà cliquer dessus, OU sur pas cat (donc fox) et qu'il a déjà cliquer fox
         if (cat && post.cat.contains(uid)) || (!cat && post.fox.contains(uid)) {
             //on retire son vote (uid) du post
             post.ref.updateData([valueOne: FieldValue.arrayRemove([uid])])
         } else { //si cat est déjà cliqué et que l'user clique sur fox, on change le vote
             post.ref.updateData([valueOne: FieldValue.arrayUnion([uid]), valueTwo: FieldValue.arrayRemove([uid])])
+            sendNotifToFirebase(text, post.userID, post.uid)
         }
     }
     
     //qd un user appui sur un post, on envoi une notif à l'auteur du post
     func sendNotifToFirebase(_ text: String, _ receiver: String, _ ref: String) {
-        guard let uid = FireAuth().myId() else { return }
-        let date = Date().timeIntervalSince1970
-        let dict: [String: Any] = [
-            KEY_TEXT: text,
-            KEY_UID: uid,
-            KEY_REF: ref,
-            KEY_SEEN: false,
-            KEY_DATE: date
-            ]
-        notifCollection(receiver).document().setData(dict)
+        getMe { (user) in
+            if user != nil { //permet de récupérer notre identité pour indiquer qui envoi notif
+                let date = Date().timeIntervalSince1970
+                let dict: [String: Any] = [
+                    KEY_TEXT: user!.surname + text,
+                    KEY_UID: user!.uid,
+                    KEY_REF: ref,
+                    KEY_SEEN: false,
+                    KEY_DATE: date
+                    ]
+                self.notifCollection(receiver).document().setData(dict)
+            }
+        }
     }
 }
