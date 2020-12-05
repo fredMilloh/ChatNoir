@@ -28,6 +28,8 @@ let KEY_CATEGORY = "category"
 let KEY_DATE = "date"
 let KEY_CAT = "cat"
 let KEY_FOX = "fox"
+let KEY_REF = "ref"
+let KEY_SEEN =  "seen"
 
 //UD
 let UD_NIGHT = "night"
