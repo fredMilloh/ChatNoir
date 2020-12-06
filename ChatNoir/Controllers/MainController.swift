@@ -39,6 +39,10 @@ class MainController: RootController {
                     if !last.isKind(of: ProfileController.self) {
                         last.performSegue(withIdentifier: SEGUE_PROFILE, sender: user)
                     }
+                } else if let ref = notif["postId"] as? String {
+                    if !last.isKind(of: DetailPostController.self) {
+                        last.performSegue(withIdentifier: SEGUE_DETAIL, sender: ref)
+                    }
                 }
                 
             }
@@ -54,7 +58,11 @@ class MainController: RootController {
         }
         if segue.identifier == SEGUE_DETAIL {
             if let next = segue.destination as? DetailPostController {
-                next.post = sender as? Post
+                if let ref = sender as? String {
+                    next.ref = ref
+                } else if let post = sender as? Post {
+                    next.post = post
+                }
             }
         }
     }

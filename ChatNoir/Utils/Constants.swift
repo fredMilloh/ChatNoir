@@ -35,6 +35,13 @@ let KEY_SEEN =  "seen"
 //UD
 let UD_NIGHT = "night"
 
+//Images
+let cat_full = UIImage(named: "cat_full")
+let cat_empty = UIImage(named: "cat_empty")
+let fox_full = UIImage(named: "fox_full")
+let fox_empty = UIImage(named: "fox_empty")
+let default_image = UIImage(named: "profile")
+
 //Colors
 let TURQUOISE = UIColor(red: 26 / 255, green: 188 / 255, blue: 156 / 255, alpha: 1)
 let SUNFLOWER = UIColor(red: 241 / 255, green: 196 / 255, blue: 15 / 255, alpha: 1)

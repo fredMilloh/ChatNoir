@@ -182,4 +182,8 @@ class FireDatabase {
             completion?(nil)
         }
     }
+    
+    func notifSeen(_ ref: DocumentReference) {
+        ref.updateData([KEY_SEEN: true])
+    }
 }

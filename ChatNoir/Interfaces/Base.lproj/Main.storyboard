@@ -552,7 +552,7 @@
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZVI-qp-6HD">
                                 <rect key="frame" x="0.0" y="112" width="414" height="750"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NotifCell" rowHeight="125" id="p0N-d1-DzA" customClass="NotificationCell" customModule="ChatNoir" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="125"/>
@@ -568,7 +568,7 @@
                                                         <constraint firstAttribute="width" constant="50" id="zY5-oD-9Ei"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="LqC-ld-bF1">
+                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="LqC-ld-bF1">
                                                     <rect key="frame" x="58" y="0.0" width="356" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="4m6-zn-q83"/>
@@ -577,7 +577,7 @@
                                                     <color key="textColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4y-KR-cOD">
+                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4y-KR-cOD">
                                                     <rect key="frame" x="0.0" y="58" width="414" height="62"/>
                                                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="18"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -633,11 +633,13 @@
                     <navigationItem key="navigationItem" id="3jN-TQ-h8s"/>
                     <connections>
                         <outlet property="tableView" destination="ZVI-qp-6HD" id="mio-rj-YRb"/>
+                        <segue destination="dbm-l8-fBO" kind="show" identifier="ToProfile" id="70U-L3-3nR"/>
+                        <segue destination="UA8-Ie-LlB" kind="show" identifier="ToDetail" id="9gL-A5-GkG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vDD-Lg-Vnj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2298.5507246376815" y="-668.30357142857144"/>
+            <point key="canvasLocation" x="2299" y="-733"/>
         </scene>
         <!--Detail Post Controller-->
         <scene sceneID="pTZ-Tp-6dm">
@@ -704,8 +706,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3v8-hN-PxR"/>
-        <segue reference="jwC-sv-bLY"/>
+        <segue reference="9gL-A5-GkG"/>
+        <segue reference="70U-L3-3nR"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="add" width="60" height="60"/>

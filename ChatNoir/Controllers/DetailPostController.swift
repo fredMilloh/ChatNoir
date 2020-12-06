@@ -13,14 +13,15 @@ class DetailPostController: MainController {
     @IBOutlet weak var cancelButton: UIButton!
     
     var post: Post?
+    var ref: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         if post != nil {
             postContainer.setup(post!)
             monitorUpdates(post!.uid)
-        } else {
-            // Notifications
+        } else if ref != nil {
+            monitorUpdates(ref!)
         }
 
     }
